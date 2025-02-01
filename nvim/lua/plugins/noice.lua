@@ -12,6 +12,7 @@ return {
                     fps = 120,
                     max_width = 60,
                     render = "wrapped-default",
+                    background_colour = "#000000",
                 },
             },
         },
