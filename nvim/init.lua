@@ -9,4 +9,4 @@ vim.opt.clipboard = "unnamedplus"
 -- vim.api.nvim_set_hl(0, "Normal", { font = "FiraCode Nerd Font" })
 
 -- Cursor line
-vim.opt.cursorline = true
+vim.opt.cursorline = false
