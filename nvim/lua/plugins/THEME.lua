@@ -14,7 +14,8 @@ return {
     },
     -- Dracula
     {
-        "Mofiqul/dracula.nvim",
+        --  "Mofiqul/dracula.nvim",
+        "CX330Blake/dracula.nvim",
         config = function()
             require("dracula").setup({
                 italic_comment = true,
@@ -26,7 +27,7 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "tokyonight",
+            colorscheme = "dracula",
             -- colorscheme = "tokyonight",
             -- colorscheme tokyonight-night
             -- colorscheme tokyonight-storm
