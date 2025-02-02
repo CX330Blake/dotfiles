@@ -4,7 +4,13 @@ return {
         "folke/tokyonight.nvim",
         lazy = false,
         priority = 1000,
-        opts = {},
+        opts = {
+            transparent = true,
+            styles = {
+                sidebars = "transparent",
+                floats = "transparent",
+            },
+        },
     },
     -- Dracula
     {
