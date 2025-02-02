@@ -1,5 +1,12 @@
 return {
-    -- Theme
+    -- Tokyonight
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+    -- Dracula
     {
         "Mofiqul/dracula.nvim",
         config = function()
@@ -13,7 +20,8 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "dracula",
+            -- colorscheme = "dracula",
+            colorscheme = "tokyonight",
         },
     },
 }
