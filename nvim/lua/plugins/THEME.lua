@@ -1,4 +1,14 @@
 return {
+    -- Cyberdream
+    {
+        "scottmckendry/cyberdream.nvim",
+        lazy = false,
+        priority = 1337,
+        opts = {
+            transparent = true,
+            italic_comment = true,
+        },
+    },
     -- Tokyonight
     {
         "folke/tokyonight.nvim",
