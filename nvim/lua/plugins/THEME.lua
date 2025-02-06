@@ -9,6 +9,7 @@ return {
             styles = {
                 sidebars = "transparent",
                 floats = "transparent",
+                comments = { italic = true },
             },
         },
     },
@@ -27,7 +28,7 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "tokyonight-moon",
+            colorscheme = "tokyonight-storm",
             -- colorscheme = "tokyonight",
             -- colorscheme tokyonight-night
             -- colorscheme tokyonight-storm
