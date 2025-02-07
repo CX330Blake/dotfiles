@@ -25,8 +25,8 @@ return {
     },
     -- Dracula
     {
-        "Mofiqul/dracula.nvim",
-        -- "CX330Blake/dracula.nvim",
+        -- "Mofiqul/dracula.nvim",
+        "CX330Blake/dracula.nvim",
         config = function()
             require("dracula").setup({
                 italic_comment = true,
