@@ -1,9 +1,19 @@
 return {
+
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
+        opts = {
+            transparent_background = true,
+        },
+    },
+
     -- Cyberdream
     {
         "scottmckendry/cyberdream.nvim",
         lazy = false,
-        priority = 1337,
+        priority = 1000,
         opts = {
             transparent = true,
             italic_comment = true,
@@ -38,7 +48,7 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "dracula",
+            colorscheme = "catppuccin-mocha",
             --  colorscheme = "tokyonight-storm",
             -- colorscheme = "tokyonight",
             -- colorscheme tokyonight-night
