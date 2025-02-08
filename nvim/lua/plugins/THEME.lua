@@ -9,6 +9,8 @@ return {
             custom_highlights = function(colors)
                 return {
                     LineNr = { fg = colors.overlay1 },
+                    ["@punctuation.bracket"] = { fg = colors.text },
+                    LspInlayHint = { fg = colors.overlay2 },
                 }
             end,
         },
