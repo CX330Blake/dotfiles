@@ -6,6 +6,11 @@ return {
         priority = 1000,
         opts = {
             transparent_background = true,
+            custom_highlights = function(colors)
+                return {
+                    LineNr = { fg = colors.overlay1 },
+                }
+            end,
         },
     },
 
@@ -31,6 +36,22 @@ return {
                 floats = "transparent",
                 comments = { italic = true },
             },
+            on_highlights = function(hl, colors)
+                local gray = "#6272A4"
+                hl.LineNr = {
+                    fg = gray,
+                }
+                hl.LineNrAbove = {
+                    fg = gray,
+                }
+                hl.LineNrBelow = {
+                    fg = gray,
+                }
+                hl.Comment = {
+                    fg = gray,
+                    italic = true,
+                }
+            end,
         },
     },
     -- Dracula
@@ -49,7 +70,7 @@ return {
         "LazyVim/LazyVim",
         opts = {
             colorscheme = "catppuccin-mocha",
-            --  colorscheme = "tokyonight-storm",
+            -- colorscheme = "tokyonight-storm",
             -- colorscheme = "tokyonight",
             -- colorscheme tokyonight-night
             -- colorscheme tokyonight-storm
