@@ -58,19 +58,19 @@ return {
                     },
                 },
                 -- You can remove this --
-                sections = {
-                    { section = "header" },
-                    { section = "keys", gap = 1, padding = 1 },
-                    { section = "startup" },
-                    {
-                        pane = 2,
-                        section = "terminal",
-                        cmd = "ascii-image-converter ~/.config/nvim/img/eagle.jpg -C -c -b --dither",
-                        indent = 0,
-                        height = 50,
-                        padding = 1,
-                    },
-                },
+                -- sections = {
+                --     { section = "header" },
+                --     { section = "keys", gap = 1, padding = 1 },
+                --     { section = "startup" },
+                --     {
+                --         pane = 2,
+                --         section = "terminal",
+                --         cmd = "ascii-image-converter ~/.config/nvim/img/eagle.jpg -C -c -b --dither",
+                --         indent = 0,
+                --         height = 50,
+                --         padding = 1,
+                --     },
+                -- },
                 -- You can remove this --
             },
         },
