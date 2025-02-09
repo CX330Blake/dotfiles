@@ -14,6 +14,15 @@ return {
                     render = "wrapped-default",
                     background_colour = "#000000",
                 },
+                keys = {
+                    {
+                        "<leader>un",
+                        function()
+                            require("notify").dismiss({ silent = true, pending = true })
+                        end,
+                        desc = "Dismiss all notifications",
+                    },
+                },
             },
         },
         opts = {
