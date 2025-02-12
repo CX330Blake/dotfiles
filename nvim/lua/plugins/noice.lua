@@ -65,6 +65,9 @@ return {
                             top = " Command ", -- 邊框上方的標題
                         },
                     },
+                    win_options = {
+                        winblend = 50,
+                    },
                 },
                 confirm = {
                     position = {
