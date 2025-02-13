@@ -12,6 +12,17 @@ return {
 
             local cmp = require("cmp")
 
+            opts.window = {
+                completion = cmp.config.window.bordered({
+                    border = "rounded", -- 讓邊框變圓角
+                    winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
+                }),
+                documentation = cmp.config.window.bordered({
+                    border = "rounded", -- 讓文檔視窗邊框變圓角
+                    winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,CursorLine:PmenuSel,Search:None",
+                }),
+            }
+
             opts.mapping = vim.tbl_extend("force", opts.mapping, {
                 ["<Tab>"] = cmp.mapping(function(fallback)
                     if cmp.visible() then
