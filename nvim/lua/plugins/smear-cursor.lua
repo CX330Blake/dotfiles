@@ -3,7 +3,7 @@ return {
     {
         "sphamba/smear-cursor.nvim",
         event = "VeryLazy",
-        cond = vim.g.neovide == nil,
+        cond = vim.g.neovide == nil and jit.os ~= "OSX",
         opts = {
             -- legacy_computing_symbols_support = true,
             stiffness = 0.6,
