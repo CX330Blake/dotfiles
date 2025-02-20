@@ -126,3 +126,6 @@ alias kali='ssh -Y cx330@10.1.1.15'
 # Go environment
 export PATH=$PATH:$HOME/.local/opt/go/bin
 export PATH=$PATH:$HOME/go/bin
+export RISCV=/opt/riscv
+export PATH=$PATH:$RISCV/bin
+export PATH="$HOME/.cargo/bin:$PATH"
