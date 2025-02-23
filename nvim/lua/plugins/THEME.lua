@@ -38,6 +38,10 @@ return {
                 floats = "transparent",
                 comments = { italic = true },
             },
+            sidebars = {
+                "Neotree",
+                "Edgy",
+            },
             on_highlights = function(hl, colors)
                 local gray = "#6272A4"
                 hl.LineNr = {
