@@ -137,4 +137,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Python
 alias python='python3'
 
-
+# Sudo
+bindkey -s '\e\e' '\C-asudo \C-e'
