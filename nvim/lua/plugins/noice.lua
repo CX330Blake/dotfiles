@@ -91,6 +91,7 @@ return {
             },
             presets = {
                 bottom_search = false,
+                lsp_doc_border = true,
             },
             notify = {
                 enabled = true, -- 讓 Noice 使用 nvim-notify
