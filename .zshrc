@@ -139,3 +139,6 @@ alias python='python3'
 
 # Sudo
 bindkey -s '\e\e' '\C-asudo \C-e'
+
+# Binary executables
+export PATH="$PATH:~/.local/bin"
