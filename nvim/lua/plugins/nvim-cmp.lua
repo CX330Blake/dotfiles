@@ -1,3 +1,7 @@
+-- Set the background to be transparent
+vim.opt.pumblend = 0
+vim.opt.winblend = 0
+
 return {
     {
         "hrsh7th/nvim-cmp",
