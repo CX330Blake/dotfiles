@@ -2,7 +2,9 @@
 require("config.lazy")
 
 -- Clipboard
-vim.opt.clipboard = "unnamedplus"
+vim.defer_fn(function()
+    vim.opt.clipboard:append("unnamedplus")
+end, 100)
 
 -- Cursor line
 vim.opt.cursorline = false
