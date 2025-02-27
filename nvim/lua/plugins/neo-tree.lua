@@ -31,7 +31,7 @@ return {
         },
         filesystem = {
             filtered_items = {
-                visible = true, -- 顯示所有文件，包括隱藏文件
+                -- visible = true, -- 顯示所有文件，包括隱藏文件
                 -- hide_dotfiles = false, -- 顯示 .開頭的隱藏檔案
                 hide_gitignored = true, -- 顯示被 .gitignore 忽略的檔案
             },
