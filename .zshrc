@@ -143,3 +143,6 @@ bindkey -s '\e\e' '\C-asudo \C-e'
 
 # Binary executables
 export PATH="$PATH:~/.local/bin"
+
+# Editor env
+export EDITOR=nvim
