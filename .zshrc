@@ -146,3 +146,10 @@ export PATH="$PATH:~/.local/bin"
 
 # Editor env
 export EDITOR=nvim
+
+# bun completions
+[ -s "/home/cx330/.bun/_bun" ] && source "/home/cx330/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
