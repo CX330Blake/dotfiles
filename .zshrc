@@ -153,3 +153,6 @@ export EDITOR=nvim
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# batcat, or bat if you like
+alias bat="batcat"
