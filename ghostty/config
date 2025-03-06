@@ -2,7 +2,7 @@
 # https://ghostty.zerebos.com/
 
 title = Happy Hacking
-background-opacity = 0.75
+background-opacity = 0.4
 background-blur-radius = 20
 theme = Dracula
 bold-is-bright = true
@@ -31,5 +31,7 @@ palette = 13=#ff79c6
 palette = 14=#8be9fd
 palette = 15=#ffffff
 font-size = 16
-font-family = FiraCode Nerd Font
-font-family-italic = VictorMono Nerd Font Mono Italic
+font-family = "FiraCode Nerd Font"
+font-style = Regular
+font-style-bold = Bold
+font-family-italic = "VictorMono Nerd Font"
