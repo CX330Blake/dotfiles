@@ -155,6 +155,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # batcat, or bat if you like
-if [[ "$(uname)" != "Darwin" ]]; then
-    alias bat="batcat"
-fi
+# if [[ "$(uname)" != "Darwin" ]]; then
+#     alias bat="batcat"
+# fi
