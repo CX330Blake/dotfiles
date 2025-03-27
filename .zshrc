@@ -158,3 +158,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # if [[ "$(uname)" != "Darwin" ]]; then
 #     alias bat="batcat"
 # fi
+
+# Volatility
+alias vol="python2 ~/Applications/volatility/vol.py"
+
