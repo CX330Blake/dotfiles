@@ -162,3 +162,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Volatility
 alias vol="python2 ~/Applications/volatility/vol.py"
 
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$JAVA_HOME/bin:$PATH
+
