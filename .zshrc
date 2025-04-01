@@ -171,3 +171,8 @@ fi
 
 # Path
 export PATH="$PATH":/home/cx330/.local/bin
+
+# Tmux
+alias "hack"="tmux attach -t hack || tmux new -s hack"
+alias "hacke"="tmux kill-session -t hack"
+
