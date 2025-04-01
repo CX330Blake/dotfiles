@@ -7,3 +7,4 @@ local map = vim.keymap.set
 -- Insert mode keymaps
 
 map("i", "jk", "<Esc>", { noremap = true, silent = true })
+map("n", "<leader>zz", ":ZenMode<CR>", { noremap = true, silent = true })
