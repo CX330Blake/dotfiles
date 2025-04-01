@@ -131,7 +131,7 @@ alias pve='ssh -Y root@10.1.1.100'
 export PATH=$PATH:$HOME/.local/opt/go/bin
 export PATH=$PATH:$HOME/go/bin
 
-# RISCVj
+# RISCV
 export RISCV=/opt/riscv
 export PATH=$PATH:$RISCV/bin
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -169,3 +169,5 @@ if [ -x /usr/libexec/java_home ]; then
   export PATH=$JAVA_HOME/bin:$PATH
 fi
 
+# Path
+export PATH="$PATH":/home/cx330/.local/bin
