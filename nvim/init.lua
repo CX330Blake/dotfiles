@@ -23,3 +23,18 @@ if jit.os == "OSX" then
     vim.keymap.set({ "n", "i", "v", "c" }, "<M-v>", "<C-v>", { noremap = true, silent = true }) -- ⌘V -> Ctrl+V
     vim.keymap.set({ "n", "i", "v", "c" }, "<M-x>", "<C-x>", { noremap = true, silent = true }) -- ⌘X -> Ctrl+X
 end
+
+-- Tmux status line
+if os.getenv("TMUX") then
+    vim.api.nvim_create_autocmd("VimEnter", {
+        callback = function()
+            vim.cmd("silent !tmux set-option -g status off")
+        end,
+    })
+
+    vim.api.nvim_create_autocmd("VimLeave", {
+        callback = function()
+            vim.cmd("silent !tmux set-option -g status on")
+        end,
+    })
+end
