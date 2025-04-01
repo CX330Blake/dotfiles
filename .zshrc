@@ -122,6 +122,7 @@ eval $(thefuck --alias)
 alias kali='ssh -Y cx330@10.1.1.15'
 alias arch='ssh -Y cx330@10.1.1.17'
 alias fedora='ssh -Y cx330@10.1.1.18'
+alias pve='ssh -Y root@10.1.1.100'
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
