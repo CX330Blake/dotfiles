@@ -37,3 +37,5 @@ font-family = "FiraCode Nerd Font"
 font-style = Regular
 font-style-bold = Bold
 font-family-italic = "VictorMono Nerd Font"
+clipboard-read = allow
+clipboard-write = allow
