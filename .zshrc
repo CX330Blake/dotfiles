@@ -173,6 +173,14 @@ fi
 export PATH="$PATH":/home/cx330/.local/bin
 
 # Tmux
-alias "hack"="tmux attach -t hack || tmux new -s hack"
+hack() {
+    if [ -n "$TMUX" ]; then
+        tmux detach
+    else
+        tmux attach -t hack || tmux new -s hack
+    fi
+}
 alias "hacke"="tmux kill-session -t hack"
 
+# FZF for fuzzy completion
+source <(fzf --zsh)
