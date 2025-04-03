@@ -184,3 +184,6 @@ alias "hacke"="tmux kill-session -t hack"
 
 # FZF for fuzzy completion
 source <(fzf --zsh)
+
+# Personal scripts and bin
+export PATH="$HOME/bin:$PATH"

@@ -6,6 +6,19 @@ vim.defer_fn(function()
     vim.opt.clipboard:append("unnamedplus")
 end, 100)
 
+-- Clipboard OSC 52
+vim.g.clipboard = {
+    name = "OSC 52",
+    copy = {
+        ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+        ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+    },
+    paste = {
+        ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+        ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+    },
+}
+
 -- Cursor line
 vim.opt.cursorline = false
 
