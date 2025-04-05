@@ -118,12 +118,13 @@ alias lg='lazygit'
 
 eval $(thefuck --alias)
 
-# Homelab
+# Homelab & SSH
 alias pve='ssh -Y root@10.1.1.100'
 alias kali='ssh -Y cx330@10.1.1.15'
 alias arch='ssh -Y cx330@10.1.1.17'
 alias fedora='ssh -Y cx330@10.1.1.18'
 alias ctfd='ssh -Y cx330@10.1.1.38'
+alias pwn='ssh -Y hacker@dojo.pwn.college'
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
