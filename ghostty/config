@@ -4,7 +4,7 @@
 title = Ghostty 👻
 background-opacity = 0.7
 background-blur-radius = 20
-theme = tokyonight-storm
+theme = tokyonight_moon
 bold-is-bright = true
 background = #1e1f29
 foreground = #e6e6e6
@@ -16,22 +16,6 @@ cursor-invert-fg-bg = true
 cursor-style-blink = false
 cursor-style = block
 shell-integration = none
-palette = 0=#000000
-palette = 1=#ff5555
-palette = 2=#50fa7b
-palette = 3=#f1fa8c
-palette = 4=#bd93f9
-palette = 5=#ff79c6
-palette = 6=#8be9fd
-palette = 7=#bbbbbb
-palette = 8=#555555
-palette = 9=#ff5555
-palette = 10=#50fa7b
-palette = 11=#f1fa8c
-palette = 12=#bd93f9
-palette = 13=#ff79c6
-palette = 14=#8be9fd
-palette = 15=#ffffff
 font-size = 16
 font-family = "FiraCode Nerd Font"
 font-style = Regular
