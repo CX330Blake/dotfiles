@@ -124,6 +124,59 @@ alias kali='ssh -Y cx330@10.1.1.15'
 alias arch='ssh -Y cx330@10.1.1.17'
 alias fedora='ssh -Y cx330@10.1.1.18'
 alias ctfd='ssh -Y cx330@10.1.1.39'
+tokali() {
+    # Check if any file arguments were provided
+    if [ "$#" -eq 0 ]; then
+        echo "Usage: tokali <file1> [file2] ..."
+        return 1
+    fi
+
+    # Loop through all provided file arguments
+    for file in "$@"; do
+        # Check if the file exists
+        if [ ! -f "$file" ]; then
+            echo "Error: File '$file' does not exist."
+            continue
+        fi
+
+        # Use scp to send the file to the remote server's home directory
+        scp "$file" cx330@10.1.1.15:~/
+
+        # Check if the scp command was successful
+        if [ $? -eq 0 ]; then
+            echo "File '$file' was successfully transferred to cx330@10.1.1.15."
+        else
+            echo "Error: Failed to transfer file '$file'."
+        fi
+    done
+}
+tofedora() {
+    # Check if any file arguments were provided
+    if [ "$#" -eq 0 ]; then
+        echo "Usage: tofedora <file1> [file2] ..."
+        return 1
+    fi
+
+    # Loop through all provided file arguments
+    for file in "$@"; do
+        # Check if the file exists
+        if [ ! -f "$file" ]; then
+            echo "Error: File '$file' does not exist."
+            continue
+        fi
+
+        # Use scp to send the file to the remote server's home directory
+        scp "$file" cx330@10.1.1.18:~/
+
+        # Check if the scp command was successful
+        if [ $? -eq 0 ]; then
+            echo "File '$file' was successfully transferred to cx330@10.1.1.18."
+        else
+            echo "Error: Failed to transfer file '$file'."
+        fi
+    done
+}
+
 
 # Pwn.college
 alias pwnc='ssh -Y hacker@dojo.pwn.college'
