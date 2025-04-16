@@ -134,13 +134,13 @@ tokali() {
     # Loop through all provided file arguments
     for file in "$@"; do
         # Check if the file exists
-        if [ ! -f "$file" ]; then
+        if [ ! -e "$file" ]; then
             echo "Error: File '$file' does not exist."
             continue
         fi
 
         # Use scp to send the file to the remote server's home directory
-        scp "$file" cx330@10.1.1.15:~/
+        scp -r "$file" cx330@10.1.1.15:~/
 
         # Check if the scp command was successful
         if [ $? -eq 0 ]; then
@@ -158,7 +158,7 @@ fromkali () {
     fi
     for file in "$@"
     do
-        scp cx330@10.1.1.15:"$file" ./
+        scp -r cx330@10.1.1.15:"$file" ./
         if [ $? -eq 0 ]
         then
             echo "File '$file' was successfully downloaded from cx330@10.1.1.15."
@@ -177,13 +177,13 @@ tofedora() {
     # Loop through all provided file arguments
     for file in "$@"; do
         # Check if the file exists
-        if [ ! -f "$file" ]; then
+        if [ ! -e "$file" ]; then
             echo "Error: File '$file' does not exist."
             continue
         fi
 
         # Use scp to send the file to the remote server's home directory
-        scp "$file" cx330@10.1.1.18:~/
+        scp -r "$file" cx330@10.1.1.18:~/
 
         # Check if the scp command was successful
         if [ $? -eq 0 ]; then
@@ -201,7 +201,7 @@ fromfedora () {
     fi
     for file in "$@"
     do
-        scp cx330@10.1.1.18:"$file" ./
+        scp -r cx330@10.1.1.18:"$file" ./
         if [ $? -eq 0 ]
         then
             echo "File '$file' was successfully downloaded from cx330@10.1.1.18."
