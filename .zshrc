@@ -150,6 +150,23 @@ tokali() {
         fi
     done
 }
+fromkali () {
+    if [ "$#" -eq 0 ]
+    then
+        echo "Usage: fromkali <remote_file1> [remote_file2] ..."
+        return 1
+    fi
+    for file in "$@"
+    do
+        scp cx330@10.1.1.15:"$file" ./
+        if [ $? -eq 0 ]
+        then
+            echo "File '$file' was successfully downloaded from cx330@10.1.1.15."
+        else
+            echo "Error: Failed to download file '$file'."
+        fi
+    done
+}
 tofedora() {
     # Check if any file arguments were provided
     if [ "$#" -eq 0 ]; then
@@ -176,7 +193,23 @@ tofedora() {
         fi
     done
 }
-
+fromfedora () {
+    if [ "$#" -eq 0 ]
+    then
+        echo "Usage: fromfedora <remote_file1> [remote_file2] ..."
+        return 1
+    fi
+    for file in "$@"
+    do
+        scp cx330@10.1.1.18:"$file" ./
+        if [ $? -eq 0 ]
+        then
+            echo "File '$file' was successfully downloaded from cx330@10.1.1.18."
+        else
+            echo "Error: Failed to download file '$file'."
+        fi
+    done
+}
 
 # Pwn.college
 alias pwnc='ssh -Y hacker@dojo.pwn.college'
