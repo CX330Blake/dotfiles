@@ -120,6 +120,7 @@ eval $(thefuck --alias)
 
 # Homelab & SSH
 alias pve='ssh -Y root@10.1.1.100'
+alias win='ssh -Y Administrator@10.1.1.14'
 alias kali='ssh -Y cx330@10.1.1.15'
 alias arch='ssh -Y cx330@10.1.1.17'
 alias fedora='ssh -Y cx330@10.1.1.18'
