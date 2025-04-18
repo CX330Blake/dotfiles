@@ -18,8 +18,12 @@ vim.g.clipboard = {
     --     ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
     -- },
     paste = {
-        ["+"] = function() end,
-        ["*"] = function() end,
+        ["+"] = function()
+            return ""
+        end,
+        ["*"] = function()
+            return ""
+        end,
     },
 }
 
