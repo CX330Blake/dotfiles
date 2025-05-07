@@ -21,7 +21,7 @@ return {
                 help = true,
             },
             server_opts_overrides = {
-                offset_encoding = "utf-8",
+                offset_encoding = "utf-16",
             },
         },
     },

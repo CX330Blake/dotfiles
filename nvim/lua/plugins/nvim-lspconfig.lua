@@ -178,6 +178,11 @@ return {
             local servers = opts.servers
             local has_cmp, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
             local has_blink, blink = pcall(require, "blink.cmp")
+
+            local base_capabilities = vim.lsp.protocol.make_client_capabilities()
+            base_capabilities.general = base_capabilities.general or {}
+            base_capabilities.general.positionEncodings = { "utf-16" }
+
             local capabilities = vim.tbl_deep_extend(
                 "force",
                 {},
