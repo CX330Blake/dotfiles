@@ -4,4 +4,5 @@ return {
     -- { "folke/edgy.nvim", enabled = false },
     { "zbirenbaum/copilot-cmp", enabled = false },
     { "sphamba/smear-cursor.nvim", enabled = false },
+    { "yetone/avante.nvim", enabled = false },
 }
