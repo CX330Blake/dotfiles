@@ -7,25 +7,25 @@ vim.defer_fn(function()
 end, 100)
 
 -- Clipboard OSC 52
-vim.g.clipboard = {
-    name = "OSC 52",
-    copy = {
-        ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
-        ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
-    },
-    -- paste = {
-    --     ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
-    --     ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
-    -- },
-    paste = {
-        ["+"] = function()
-            return ""
-        end,
-        ["*"] = function()
-            return ""
-        end,
-    },
-}
+-- vim.g.clipboard = {
+--     name = "OSC 52",
+--     copy = {
+--         ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+--         ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+--     },
+--     -- paste = {
+--     --     ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+--     --     ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+--     -- },
+--     paste = {
+--         ["+"] = function()
+--             return ""
+--         end,
+--         ["*"] = function()
+--             return ""
+--         end,
+--     },
+-- }
 
 -- Cursor line
 vim.opt.cursorline = false
