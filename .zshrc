@@ -122,9 +122,7 @@ eval $(thefuck --alias)
 alias pve='ssh -Y root@10.1.1.100'
 alias win='ssh -Y cx330@10.1.1.10'
 alias kali='ssh -Y cx330@10.1.1.15'
-alias manjaro='ssh -Y cx330@10.1.1.55'
 alias fedora='ssh -Y cx330@10.1.1.18'
-alias ctfd='ssh -Y cx330@10.1.1.39'
 tokali() {
     # Check if any file arguments were provided
     if [ "$#" -eq 0 ]; then
