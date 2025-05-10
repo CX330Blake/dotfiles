@@ -119,10 +119,12 @@ alias lg='lazygit'
 eval $(thefuck --alias)
 
 # Homelab & SSH
-alias pve='ssh -Y root@10.1.1.100'
-alias win='ssh -Y cx330@10.1.1.10'
-alias kali='ssh -Y cx330@10.1.1.15'
-alias fedora='ssh -Y cx330@10.1.1.18'
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
+alias pve='ssh -Y root@pve'
+alias win='ssh -Y cx330@win10'
+alias kali='ssh -Y cx330@kali'
+alias fedora='ssh -Y cx330@fedora'
 tokali() {
     # Check if any file arguments were provided
     if [ "$#" -eq 0 ]; then
@@ -143,7 +145,7 @@ tokali() {
 
         # Check if the scp command was successful
         if [ $? -eq 0 ]; then
-            echo "File '$file' was successfully transferred to cx330@10.1.1.15."
+            echo "File '$file' was successfully transferred to cx330@kali"
         else
             echo "Error: Failed to transfer file '$file'."
         fi
@@ -160,7 +162,7 @@ fromkali () {
         scp -r cx330@10.1.1.15:"$file" ./
         if [ $? -eq 0 ]
         then
-            echo "File '$file' was successfully downloaded from cx330@10.1.1.15."
+            echo "File '$file' was successfully downloaded from cx330@kali"
         else
             echo "Error: Failed to download file '$file'."
         fi
@@ -186,7 +188,7 @@ tofedora() {
 
         # Check if the scp command was successful
         if [ $? -eq 0 ]; then
-            echo "File '$file' was successfully transferred to cx330@10.1.1.18."
+            echo "File '$file' was successfully transferred to cx330@fedora"
         else
             echo "Error: Failed to transfer file '$file'."
         fi
@@ -203,7 +205,7 @@ fromfedora () {
         scp -r cx330@10.1.1.18:"$file" ./
         if [ $? -eq 0 ]
         then
-            echo "File '$file' was successfully downloaded from cx330@10.1.1.18."
+            echo "File '$file' was successfully downloaded from cx330@fedora"
         else
             echo "Error: Failed to download file '$file'."
         fi
