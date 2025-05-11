@@ -118,7 +118,7 @@ alias lg='lazygit'
 
 eval $(thefuck --alias)
 
-# Homelab & SSH
+##### Homelab & SSH #####
 if [[ "$(uname)" == "Darwin" ]]; then
     alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 fi
@@ -214,59 +214,58 @@ fromfedora () {
     done
 }
 
-# Pwn.college
+##!/bin/bash
+#iptables -t nat -A PREROUTING -i tailscale0 -p tcp --dport 13389 -j DNAT --to-destination 192.168.77.10:3389
+#iptables -A FORWARD -i tailscale0 -p tcp -d 192.168.77.10 --dport 3389 -j ACCEPT
+
+##### Pwn.college #####
 alias pwnc='ssh -Y hacker@dojo.pwn.college'
 alias pwnc-getchal='scp "hacker@dojo.pwn.college:/challenge/*" ./'
 
-# Generated for envman. Do not edit.
+###### Generated for envman. Do not edit #####
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 # Go environment
 export PATH=$PATH:$HOME/.local/opt/go/bin
 export PATH=$PATH:$HOME/go/bin
 
-# RISCV
+##### RISCV #####
 export RISCV=/opt/riscv
 export PATH=$PATH:$RISCV/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Python
+##### Python #####
 alias python='python3'
 
-# Sudo
+##### Sudo #####
 bindkey -s '\e\e' '\C-asudo \C-e'
 
-# Binary executables
+##### Binary executables #####
 export PATH="$PATH:~/.local/bin"
 
-# Editor env
+##### Editor env #####
 export EDITOR=nvim
 
-# bun completions
+##### bun completions #####
 [ -s "/home/cx330/.bun/_bun" ] && source "/home/cx330/.bun/_bun"
 
-# bun
+##### bun #####
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# batcat, or bat if you like
-# if [[ "$(uname)" != "Darwin" ]]; then
-#     alias bat="batcat"
-# fi
-
-# Volatility
+##### Volatility #####
 alias vol="python2 ~/Applications/volatility/vol.py"
 
-# Java
+##### Java #####
 if [ -x /usr/libexec/java_home ]; then
   export JAVA_HOME=$(/usr/libexec/java_home)
   export PATH=$JAVA_HOME/bin:$PATH
 fi
 
-# Path
+##### Path #####
 export PATH="$PATH":/home/cx330/.local/bin
 
-# Tmux
+##### Tmux #####
 hack() {
     if [ -n "$TMUX" ]; then
         tmux detach
@@ -276,11 +275,11 @@ hack() {
 }
 alias "hacke"="tmux kill-session -t hack"
 
-# FZF for fuzzy completion
+##### FZF for fuzzy completion #####
 source <(fzf --zsh)
 
-# Personal scripts and bin
+##### Personal scripts and bin #####
 export PATH="$HOME/bin:$PATH"
 
-# Binary ninja on Mac
+##### Binary ninja on Mac #####
 alias binja='/Applications/Binary\ Ninja.app/Contents/MacOS/binaryninja'
