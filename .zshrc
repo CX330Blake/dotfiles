@@ -119,7 +119,9 @@ alias lg='lazygit'
 eval $(thefuck --alias)
 
 # Homelab & SSH
-alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+if [[ "$(uname)" == "Darwin" ]]; then
+    alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+fi
 
 alias pve='ssh -Y root@pve'
 alias win='ssh -Y cx330@win10'
