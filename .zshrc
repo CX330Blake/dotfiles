@@ -186,7 +186,7 @@ tofedora() {
         fi
 
         # Use scp to send the file to the remote server's home directory
-        scp -r "$file" cx330@10.1.1.18:~/
+        scp -r "$file" cx330@fedora:~/
 
         # Check if the scp command was successful
         if [ $? -eq 0 ]; then
@@ -204,7 +204,7 @@ fromfedora () {
     fi
     for file in "$@"
     do
-        scp -r cx330@10.1.1.18:"$file" ./
+        scp -r cx330@fedora:"$file" ./
         if [ $? -eq 0 ]
         then
             echo "File '$file' was successfully downloaded from cx330@fedora"
