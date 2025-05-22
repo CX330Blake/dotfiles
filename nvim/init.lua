@@ -46,7 +46,7 @@ vim.g.clipboard = {
     },
 }
 -- Cursor line
-vim.opt.cursorline = false
+-- vim.opt.cursorline = false
 
 -- Neovide config
 if vim.g.neovide then
