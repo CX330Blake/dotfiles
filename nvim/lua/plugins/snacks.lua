@@ -1,7 +1,9 @@
 return {
     {
         "snacks.nvim",
+        ---@type snacks.Config
         opts = {
+            explorer = {},
             indent = { enabled = false },
             notifier = { enabled = false },
             image = {

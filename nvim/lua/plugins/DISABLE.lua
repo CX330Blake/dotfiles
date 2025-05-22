@@ -5,4 +5,5 @@ return {
     { "zbirenbaum/copilot-cmp", enabled = false },
     { "sphamba/smear-cursor.nvim", enabled = false },
     { "yetone/avante.nvim", enabled = false },
+    { "nvim-neo-tree/neo-tree.nvim", enabled = false },
 }
