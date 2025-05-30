@@ -215,6 +215,7 @@ fromfedora () {
 }
 
 ##!/bin/bash
+## Flare-VM port forwarding!!!
 #iptables -t nat -A PREROUTING -i tailscale0 -p tcp --dport 13389 -j DNAT --to-destination 192.168.77.10:3389
 #iptables -A FORWARD -i tailscale0 -p tcp -d 192.168.77.10 --dport 3389 -j ACCEPT
 
