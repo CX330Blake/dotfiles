@@ -290,3 +290,6 @@ export PATH="$HOME/bin:$PATH"
 
 ##### Binary ninja on Mac #####
 alias binja='/Applications/Binary\ Ninja.app/Contents/MacOS/binaryninja'
+
+##### Proxychains for Tor (default) #####
+alias pc="proxychains -q"
