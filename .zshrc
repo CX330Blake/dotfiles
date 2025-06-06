@@ -295,3 +295,7 @@ alias binja='/Applications/Binary\ Ninja.app/Contents/MacOS/binaryninja'
 ##### Proxychains for Tor (default) #####
 alias pc="proxychains -q"
 
+
+##### Zig #####
+alias zb="zig build"
+alias zbr="zig build run"
