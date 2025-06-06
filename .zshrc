@@ -123,6 +123,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
     alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 fi
 
+alias ts="tailscale"
 alias pve='ssh -Y root@pve'
 alias win='ssh -Y cx330@win10'
 alias kali='ssh -Y cx330@kali'
@@ -293,3 +294,4 @@ alias binja='/Applications/Binary\ Ninja.app/Contents/MacOS/binaryninja'
 
 ##### Proxychains for Tor (default) #####
 alias pc="proxychains -q"
+
