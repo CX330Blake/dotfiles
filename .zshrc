@@ -299,3 +299,6 @@ alias pc="proxychains -q"
 ##### Zig #####
 alias zb="zig build"
 alias zbr="zig build run"
+
+##### Empty download folder at home #####
+alias shit="rm -rf ~/Downloads/*"
