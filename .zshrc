@@ -128,6 +128,7 @@ alias pve='ssh -Y root@pve'
 alias win='ssh -Y cx330@win10'
 alias kali='ssh -Y cx330@kali'
 alias fedora='ssh -Y cx330@fedora'
+alias affine='ssh -Y cx330@affine'
 tokali() {
     # Check if any file arguments were provided
     if [ "$#" -eq 0 ]; then
