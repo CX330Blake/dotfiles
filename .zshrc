@@ -130,6 +130,7 @@ alias kali='ssh -Y cx330@kali'
 alias fedora='ssh -Y cx330@fedora'
 alias affine='ssh -Y cx330@affine'
 alias travel='ssh -Y cx330@travel'
+alias mythic='ssh -Y cx330@mythic'
 tokali() {
     # Check if any file arguments were provided
     if [ "$#" -eq 0 ]; then
