@@ -26,3 +26,6 @@ font-style-bold = Bold
 font-family-italic = "VictorMono Nerd Font"
 clipboard-read = allow
 clipboard-write = allow
+macos-titlebar-style = hidden
+window-padding-x = 10
+window-padding-y = 10
