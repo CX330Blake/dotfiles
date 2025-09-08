@@ -6,7 +6,7 @@ return {
         name = "catppuccin",
         priority = 1000,
         opts = {
-            transparent_background = true,
+            transparent_background = false,
             custom_highlights = function(colors)
                 return {
                     LineNr = { fg = colors.overlay1 },
@@ -68,7 +68,7 @@ return {
         config = function()
             require("dracula").setup({
                 italic_comment = true,
-                transparent_bg = true,
+                transparent_bg = false,
             })
         end,
     },
@@ -107,14 +107,14 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-            -- colorscheme = "catppuccin-mocha",
+            colorscheme = "catppuccin-latte",
             -- colorscheme = "tokyonight-moon",
             -- colorscheme = "tokyonight",
             -- colorscheme = "tokyonight-night"
             -- colorscheme = "tokyonight-storm"
             -- colorscheme = "tokyonight-day",
             -- colorscheme = "tokyonight-moon",
-            colorscheme = "gruvbox",
+            -- colorscheme = "gruvbox",
         },
     },
 }
