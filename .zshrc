@@ -308,3 +308,6 @@ alias shit="rm -rf ~/Downloads/*"
 
 ##### eza, the modern ls #####
 alias ls="eza --icons"
+
+##### FlareOn Challenges #####
+alias flare="cd ~/Working/Share/FlareOn/"
