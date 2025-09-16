@@ -311,3 +311,5 @@ alias ls="eza --icons"
 
 ##### FlareOn Challenges #####
 alias flare="cd ~/Working/Share/FlareOn/"
+
+export PATH="$PATH:/Applications/microchip/xc8/v3.10/bin"
