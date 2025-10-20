@@ -313,3 +313,8 @@ alias ls="eza --icons"
 alias flare="cd ~/Working/Share/FlareOn/"
 
 export PATH="$PATH:/Applications/microchip/xc8/v3.10/bin"
+
+
+##### Mac borders #####
+alias borderon="brew services start borders"
+alias borderoff="brew services stop borders"
