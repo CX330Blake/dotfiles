@@ -102,6 +102,14 @@ return {
             transparent_mode = false,
         },
     },
+    -- Rose Pine
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        config = function()
+            vim.cmd("colorscheme rose-pine")
+        end,
+    },
 
     -- Configure LazyVim to load dracula
     {

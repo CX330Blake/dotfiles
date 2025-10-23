@@ -6,6 +6,7 @@ return {
             -- Minimal config
             themes = {
                 "dracula",
+                "rose-pine",
                 "tokyonight-moon",
                 "catppuccin-latte",
                 "catppuccin-mocha",
