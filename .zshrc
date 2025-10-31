@@ -312,9 +312,14 @@ alias ls="eza --icons"
 ##### FlareOn Challenges #####
 alias flare="cd ~/Working/Share/FlareOn/"
 
-export PATH="$PATH:/Applications/microchip/xc8/v3.10/bin"
-
-
 ##### Mac borders #####
 alias borderon="brew services start borders"
 alias borderoff="brew services stop borders"
+
+##### OpenMPI #####
+export PATH=/usr/lib64/openmpi/bin:$PATH
+export OMPI_MCA_pml=ob1
+export OMPI_MCA_btl=self,tcp
+export OMPI_MCA_mtl=^ofi
+
+
