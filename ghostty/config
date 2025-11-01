@@ -35,3 +35,4 @@ window-padding-y = 10
 # custom-shader-animation = true
 # custom-shader = "shaders/tesla_coil.glsl"
 # custom-shader = "shaders/glow.glsl"
+custom-shader = "shaders/cursor_warp.glsl"
