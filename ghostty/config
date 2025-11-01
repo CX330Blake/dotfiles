@@ -29,3 +29,9 @@ clipboard-write = allow
 macos-titlebar-style = hidden
 window-padding-x = 10
 window-padding-y = 10
+
+
+# Shaders
+# custom-shader-animation = true
+# custom-shader = "shaders/tesla_coil.glsl"
+# custom-shader = "shaders/glow.glsl"
