@@ -5,10 +5,10 @@ return {
         require("themery").setup({
             -- Minimal config
             themes = {
-                "dracula",
+                "catppuccin-latte",
                 "rose-pine",
                 "tokyonight-moon",
-                "catppuccin-latte",
+                "dracula",
                 "catppuccin-mocha",
                 "gruvbox",
             }, -- Your list of installed colorschemes.
