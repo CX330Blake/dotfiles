@@ -8,6 +8,7 @@ return {
                 "catppuccin-latte",
                 "rose-pine",
                 "tokyonight-moon",
+                "tokyonight-day",
                 "dracula",
                 "catppuccin-mocha",
                 "gruvbox",

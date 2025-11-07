@@ -29,7 +29,21 @@
       // Chat with AI
       "space a c": "assistant::ToggleFocus",
       // Go to file with `gf`
-      "g f": "editor::OpenExcerpts"
+      "g f": "editor::OpenExcerpts",
+      // Codex
+      "cmd-alt-c": [
+        "agent::NewExternalAgentThread",
+        {
+          "agent": "codex"
+        }
+      ],
+      // Gemini
+      "cmd-alt-g": [
+        "agent::NewExternalAgentThread",
+        {
+          "agent": "gemini"
+        }
+      ]
     }
   },
   {
