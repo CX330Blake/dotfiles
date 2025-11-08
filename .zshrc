@@ -322,4 +322,5 @@ export OMPI_MCA_pml=ob1
 export OMPI_MCA_btl=self,tcp
 export OMPI_MCA_mtl=^ofi
 
-
+##### Bat #####
+export BAT_THEME="Dracula"
