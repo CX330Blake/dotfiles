@@ -324,3 +324,7 @@ export OMPI_MCA_mtl=^ofi
 
 ##### Bat #####
 export BAT_THEME="Dracula"
+
+##### Onefetch #####
+alias of=onefetch
+
