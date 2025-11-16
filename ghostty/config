@@ -20,6 +20,8 @@ font-size = 16
 # font-family = "FiraCode Nerd Font"
 # font-family = "Zed Mono"
 font-family = "Maple Mono NF Regular"
+font-codepoint-map = U+4E00-U+9FFF = LXGW WenKai Mono
+font-codepoint-map = U+3400-U+4DBF = LXGW WenKai Mono
 adjust-cell-height = 15% 
 font-style = Regular
 font-style-bold = Bold
