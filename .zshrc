@@ -329,3 +329,6 @@ export BAT_THEME="Dracula"
 ##### Onefetch #####
 alias of=onefetch
 
+
+# Added by Antigravity
+export PATH="/Users/CX330/.antigravity/antigravity/bin:$PATH"
