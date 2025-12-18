@@ -4,9 +4,9 @@ return {
         version = "*",
         opts = {
             size = 15,
-            open_mapping = [[<leader>jj]],
+            open_mapping = [[<leader>tt]],
             hide_numbers = true,
-            -- direction = "float",
+            direction = "float",
         },
     },
 }

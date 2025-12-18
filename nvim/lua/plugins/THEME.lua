@@ -1,4 +1,33 @@
 return {
+    -- Kanagawa
+    {
+        "rebelot/kanagawa.nvim",
+        priority = 1000,
+        opts = {
+            compile = false, -- enable compiling the colorscheme
+            undercurl = true, -- enable undercurls
+            commentStyle = { italic = true },
+            functionStyle = {},
+            keywordStyle = { italic = true },
+            statementStyle = { bold = true },
+            typeStyle = {},
+            transparent = false, -- do not set background color
+            dimInactive = false, -- dim inactive window `:h hl-NormalNC`
+            terminalColors = true, -- define vim.g.terminal_color_{0,17}
+            colors = { -- add/modify theme and palette colors
+                palette = {},
+                theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+            },
+            overrides = function(colors) -- add/modify highlights
+                return {}
+            end,
+            theme = "wave", -- Load "wave" theme
+            background = { -- map the value of 'background' option to a theme
+                dark = "wave", -- try "dragon" !
+                light = "wave",
+            },
+        },
+    },
     -- Catppuccin
     {
         "catppuccin/nvim",
@@ -33,7 +62,7 @@ return {
         lazy = false,
         priority = 1000,
         opts = {
-            transparent = true,
+            transparent = false,
             styles = {
                 sidebars = "transparent",
                 floats = "transparent",
@@ -189,8 +218,6 @@ return {
             vim.cmd.colorscheme("rose-pine-dawn") -- 也可改成 "rose-pine-main"、"rose-pine-moon"、"rose-pine-dawn"
         end,
     },
-
-    -- Configure LazyVim to load dracula
     {
         "LazyVim/LazyVim",
         opts = {

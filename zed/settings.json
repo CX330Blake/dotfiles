@@ -7,8 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-5"
+    },
+    "model_parameters": []
+  },
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "copilot"
   },
   "ssh_connections": [
     {
@@ -74,7 +81,7 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Rosé Pine Dawn",
+    "light": "Tokyo Night Moon",
     "dark": "Tokyo Night Storm"
   },
   "formatter": "language_server",

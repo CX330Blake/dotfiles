@@ -12,6 +12,7 @@ return {
                 "dracula",
                 "catppuccin-mocha",
                 "gruvbox",
+                "kanagawa",
             }, -- Your list of installed colorschemes.
             livePreview = true, -- Apply theme while picking. Default to true.
         })
