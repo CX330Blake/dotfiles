@@ -1,0 +1,28 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "mcp": {
+        "Binary Ninja MCP": {
+            "type": "local",
+            // Or ["bun", "x", "my-mcp-command"]
+            "command": [
+                "/Users/CX330/Library/Application Support/Binary Ninja/plugins/binary_ninja_mcp/.venv/bin/python3",
+                "/Users/CX330/Library/Application Support/Binary Ninja/plugins/binary_ninja_mcp/bridge/binja_mcp_bridge.py",
+            ],
+            "enabled": true,
+        },
+        "Context7": {
+            "type": "local",
+            "command": ["npx", "-y", "@upstash/context7-mcp"],
+            "enabled": true,
+        },
+        "Sequential Thinking": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@modelcontextprotocol/server-sequential-thinking",
+            ],
+            "enabled": true,
+        },
+    },
+}
