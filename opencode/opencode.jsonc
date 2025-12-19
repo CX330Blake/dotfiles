@@ -24,5 +24,15 @@
             ],
             "enabled": true,
         },
+        "Hexstrike": {
+            "type": "local",
+            "command": [
+                "python3",
+                "/Users/CX330/hexstrike_mcp.py",
+                "--server",
+                "http://kali:8888",
+            ],
+            "enabled": true,
+        },
     },
 }
