@@ -1,3 +1,23 @@
+local function macos_is_dark()
+    if vim.fn.has("mac") ~= 1 then
+        return vim.o.background == "dark"
+    end
+
+    local out = vim.fn.system({
+        "defaults",
+        "read",
+        "-g",
+        "AppleInterfaceStyle",
+    })
+
+    return vim.v.shell_error == 0 and out:match("Dark") ~= nil
+end
+
+local is_dark = macos_is_dark()
+vim.opt.background = is_dark and "dark" or "light"
+
+local COLORSCHEME = is_dark and "tokyonight-moon" or "rose-pine"
+
 return {
     -- Kanagawa
     {
@@ -212,23 +232,15 @@ return {
                 -- end
             end,
         },
-
-        config = function(_, opts)
-            require("rose-pine").setup(opts)
-            vim.cmd.colorscheme("rose-pine-dawn") -- 也可改成 "rose-pine-main"、"rose-pine-moon"、"rose-pine-dawn"
-        end,
+        -- config = function(_, opts)
+        --     require("rose-pine").setup(opts)
+        --     vim.cmd.colorscheme("rose-pine-dawn") -- 也可改成 "rose-pine-main"、"rose-pine-moon"、"rose-pine-dawn"
+        -- end,
     },
     {
         "LazyVim/LazyVim",
         opts = {
-            -- colorscheme = "catppuccin-latte",
-            colorscheme = "tokyonight-moon",
-            -- colorscheme = "tokyonight",
-            -- colorscheme = "tokyonight-night"
-            -- colorscheme = "tokyonight-storm"
-            -- colorscheme = "tokyonight-day",
-            -- colorscheme = "tokyonight-moon",
-            -- colorscheme = "gruvbox",
+            colorscheme = COLORSCHEME,
         },
     },
 }
