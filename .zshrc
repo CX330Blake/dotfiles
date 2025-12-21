@@ -165,7 +165,7 @@ fromkali () {
     fi
     for file in "$@"
     do
-        scp -r cx330@10.1.1.15:"$file" ./
+        scp -r cx330@kali:"$file" ./
         if [ $? -eq 0 ]
         then
             echo "File '$file' was successfully downloaded from cx330@kali"
