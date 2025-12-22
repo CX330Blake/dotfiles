@@ -324,7 +324,7 @@ export OMPI_MCA_btl=self,tcp
 export OMPI_MCA_mtl=^ofi
 
 ##### Bat #####
-export BAT_THEME="Dracula"
+export BAT_THEME="ansi"
 
 ##### Onefetch #####
 alias of=onefetch
@@ -334,4 +334,11 @@ alias oc=opencode
 
 # Added by Antigravity
 export PATH="/Users/CX330/.antigravity/antigravity/bin:$PATH"
+
+# Neovim
+if defaults read -g AppleInterfaceStyle &>/dev/null; then
+  export NVIM_THEME=dark
+else
+  export NVIM_THEME=light
+fi
 

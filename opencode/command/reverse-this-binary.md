@@ -28,6 +28,7 @@ $1
 - Never run the binary unless you asked me.
 - Always browse all the strings first
 - Always rename the functions, variables, parameters, etc every time you analyzed a block of code.
+- Always set the correct enum value for numbers if it's an enum.
 - Always do the type reconstruction to fix the wrong types every time you reviewed a block of code, more specifically:
   - Create the missing type (e.g. struct, enum, union, etc) using Binary Ninja and apply them to the corresponding variable.
   - Fix the wrong type display in Binary Ninja (e.g. should be a pointer but displayed as `int64_t` or `char*` displayed as `void*`)

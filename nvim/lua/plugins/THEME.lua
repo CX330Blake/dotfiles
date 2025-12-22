@@ -13,7 +13,7 @@ local function macos_is_dark()
     return vim.v.shell_error == 0 and out:match("Dark") ~= nil
 end
 
-local is_dark = macos_is_dark()
+local is_dark = vim.env.NVIM_THEME == "dark"
 vim.opt.background = is_dark and "dark" or "light"
 
 local COLORSCHEME = is_dark and "tokyonight-moon" or "rose-pine"
