@@ -342,3 +342,5 @@ else
   export NVIM_THEME=light
 fi
 
+##### Spotify Player #####
+alias spotify=spotify_player

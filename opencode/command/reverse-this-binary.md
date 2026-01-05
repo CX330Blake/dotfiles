@@ -32,3 +32,4 @@ $1
 - Always do the type reconstruction to fix the wrong types every time you reviewed a block of code, more specifically:
   - Create the missing type (e.g. struct, enum, union, etc) using Binary Ninja and apply them to the corresponding variable.
   - Fix the wrong type display in Binary Ninja (e.g. should be a pointer but displayed as `int64_t` or `char*` displayed as `void*`)
+- The host isn't for dynamic analysis, so if you need to run the binary or emulate it via qemu, do it by Hexstrike. Always keep the local environment clean.
