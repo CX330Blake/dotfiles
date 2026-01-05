@@ -44,5 +44,6 @@ PLEASE STRICTLY FOLLOW THE RULES BELOW, ANY VIOLATION IS NOT ALLOWED
 
 - If the challenge already give you the source code, you don't need to use Binary Ninja to reverse it.
 - Remember, dynamic analysis is important for exploit debugging, make good use of GDB via Hexstrike.
+- The host isn't for dynamic analysis, so if you need to run the binary or emulate it via qemu, do it by Hexstrike. Always keep the local environment clean.
 - Hexstrike is deployed on remote server and I used Syncthing for the file syncing, so always follow the rules when you need to access the file in Hexstrike.
   - `/Users/CX330/Working/Share/` is mapped to `/home/cx330/Working/Share` on Hexstrike server

@@ -342,6 +342,9 @@ else
   export NVIM_THEME=light
 fi
 
+##### Spotify Player #####
+alias spotify=spotify_player
+
 # pnpm
 export PNPM_HOME="/home/cx330/.local/share/pnpm"
 case ":$PATH:" in

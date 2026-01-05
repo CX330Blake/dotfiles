@@ -1,18 +1,17 @@
 {
+    "plugin": [
+        "oh-my-opencode",
+        "opencode-antigravity-auth@1.2.7",
+        "opencode-openai-codex-auth",
+    ],
     "$schema": "https://opencode.ai/config.json",
     "mcp": {
         "Binary Ninja MCP": {
             "type": "local",
-            // Or ["bun", "x", "my-mcp-command"]
             "command": [
                 "/Users/CX330/Library/Application Support/Binary Ninja/plugins/binary_ninja_mcp/.venv/bin/python3",
                 "/Users/CX330/Library/Application Support/Binary Ninja/plugins/binary_ninja_mcp/bridge/binja_mcp_bridge.py",
             ],
-            "enabled": true,
-        },
-        "Context7": {
-            "type": "local",
-            "command": ["npx", "-y", "@upstash/context7-mcp"],
             "enabled": true,
         },
         "Sequential Thinking": {
@@ -32,7 +31,97 @@
                 "--server",
                 "http://kali:8888",
             ],
-            "enabled": true,
+            "enabled": false,
+        },
+    },
+    "provider": {
+        "google": {
+            "name": "Google",
+            "models": {
+                "gemini-3-pro-high": {
+                    "name": "Gemini 3 Pro High (Antigravity)",
+                    "thinking": true,
+                    "attachment": true,
+                    "limit": {
+                        "context": 1048576,
+                        "output": 65535,
+                    },
+                    "modalities": {
+                        "input": ["text", "image", "pdf"],
+                        "output": ["text"],
+                    },
+                },
+                "gemini-3-pro-medium": {
+                    "name": "Gemini 3 Pro Medium (Antigravity)",
+                    "thinking": true,
+                    "attachment": true,
+                    "limit": {
+                        "context": 1048576,
+                        "output": 65535,
+                    },
+                    "modalities": {
+                        "input": ["text", "image", "pdf"],
+                        "output": ["text"],
+                    },
+                },
+                "gemini-3-pro-low": {
+                    "name": "Gemini 3 Pro Low (Antigravity)",
+                    "thinking": true,
+                    "attachment": true,
+                    "limit": {
+                        "context": 1048576,
+                        "output": 65535,
+                    },
+                    "modalities": {
+                        "input": ["text", "image", "pdf"],
+                        "output": ["text"],
+                    },
+                },
+                "gemini-3-flash": {
+                    "name": "Gemini 3 Flash (Antigravity)",
+                    "attachment": true,
+                    "limit": {
+                        "context": 1048576,
+                        "output": 65536,
+                    },
+                    "modalities": {
+                        "input": ["text", "image", "pdf"],
+                        "output": ["text"],
+                    },
+                },
+                "gemini-3-flash-lite": {
+                    "name": "Gemini 3 Flash Lite (Antigravity)",
+                    "attachment": true,
+                    "limit": {
+                        "context": 1048576,
+                        "output": 65536,
+                    },
+                    "modalities": {
+                        "input": ["text", "image", "pdf"],
+                        "output": ["text"],
+                    },
+                },
+            },
+        },
+        "openai": {
+            "name": "OpenAI",
+            "api": "codex",
+            "models": {
+                "gpt-5.2": {
+                    "name": "GPT-5.2",
+                },
+                "o3": {
+                    "name": "o3",
+                    "thinking": true,
+                },
+                "o4-mini": {
+                    "name": "o4-mini",
+                    "thinking": true,
+                },
+                "codex-1": {
+                    "name": "Codex-1",
+                },
+            },
         },
     },
 }
