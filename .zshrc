@@ -344,3 +344,27 @@ fi
 
 ##### Spotify Player #####
 alias spotify=spotify_player
+
+# pnpm
+export PNPM_HOME="/home/cx330/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/cx330/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/cx330/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/cx330/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/cx330/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
