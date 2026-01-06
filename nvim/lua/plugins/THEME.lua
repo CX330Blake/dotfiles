@@ -1,22 +1,24 @@
-local function macos_is_dark()
-    if vim.fn.has("mac") ~= 1 then
-        return vim.o.background == "dark"
-    end
+-- local function macos_is_dark()
+--     if vim.fn.has("mac") ~= 1 then
+--         return vim.o.background == "dark"
+--     end
+--
+--     local out = vim.fn.system({
+--         "defaults",
+--         "read",
+--         "-g",
+--         "AppleInterfaceStyle",
+--     })
+--
+--     return vim.v.shell_error == 0 and out:match("Dark") ~= nil
+-- end
 
-    local out = vim.fn.system({
-        "defaults",
-        "read",
-        "-g",
-        "AppleInterfaceStyle",
-    })
-
-    return vim.v.shell_error == 0 and out:match("Dark") ~= nil
-end
-
-local is_dark = vim.env.NVIM_THEME == "dark"
-vim.opt.background = is_dark and "dark" or "light"
-
-local COLORSCHEME = is_dark and "tokyonight-moon" or "rose-pine"
+-- local is_dark = vim.env.NVIM_THEME == "dark"
+-- vim.opt.background = is_dark and "dark" or "light"
+--
+-- local LIGHT_THEME = "rose-pine"
+-- local DARK_THEME = "tokyonight-moon"
+-- local COLORSCHEME = is_dark and DARK_THEME or LIGHT_THEME
 
 return {
     -- Kanagawa
@@ -158,7 +160,7 @@ return {
         priority = 1000,
         opts = {
             variant = "auto", -- auto, main, moon, or dawn
-            dark_variant = "main", -- main, moon, or dawn
+            dark_variant = "moon", -- main, moon, or dawn
             dim_inactive_windows = false,
             extend_background_behind_borders = true,
 
@@ -238,9 +240,69 @@ return {
         -- end,
     },
     {
-        "LazyVim/LazyVim",
+        "f-person/auto-dark-mode.nvim",
+        lazy = false,
+        priority = 1001,
         opts = {
-            colorscheme = COLORSCHEME,
+            -- update_interval = 3000,
+            -- fallback = "dark",
+            --
+            -- set_dark_mode = function()
+            --     -- vim.opt.background = "dark"
+            --     vim.cmd.colorscheme("tokyonight-moon")
+            -- end,
+            --
+            -- set_light_mode = function()
+            --     -- vim.opt.background = "light"
+            --     vim.cmd.colorscheme("rose-pine")
+            -- end,
         },
     },
+    {
+        "LazyVim/LazyVim",
+        opts = function()
+            return {
+                colorscheme = "tokyonight",
+            }
+        end,
+    },
+
+    -- -- Auto dark/light switching
+    -- {
+    --     "f-person/auto-dark-mode.nvim",
+    --
+    --     -- ✅ 新增：確保它啟動就載入，才能在 nvim 開著時追蹤系統變化
+    --     lazy = false,
+    --     priority = 1001,
+    --
+    --     opts = {
+    --         -- your configuration comes here
+    --         -- or leave it empty to use the default settings
+    --         -- refer to the configuration section below
+    --
+    --         -- ✅ 新增：檢查頻率（毫秒）
+    --         update_interval = 3000,
+    --
+    --         -- ✅ 新增：切深色（同時切 background + colorscheme）
+    --         set_dark_mode = function()
+    --             vim.api.nvim_set_option_value("background", "dark", {})
+    --             vim.cmd.colorscheme(DARK_THEME)
+    --         end,
+    --
+    --         -- ✅ 新增：切淺色（同時切 background + colorscheme）
+    --         set_light_mode = function()
+    --             vim.api.nvim_set_option_value("background", "light", {})
+    --             vim.cmd.colorscheme(LIGHT_THEME)
+    --         end,
+    --     },
+    --
+    --     -- ✅ 新增：保險起見，手動 setup / init（不同版本行為更穩）
+    --     config = function(_, opts)
+    --         local adm = require("auto-dark-mode")
+    --         adm.setup(opts)
+    --         if adm.init then
+    --             adm.init()
+    --         end
+    --     end,
+    -- },
 }
