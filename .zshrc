@@ -336,11 +336,18 @@ alias oc=opencode
 export PATH="/Users/CX330/.antigravity/antigravity/bin:$PATH"
 
 # Neovim
-if defaults read -g AppleInterfaceStyle &>/dev/null; then
-  export NVIM_THEME=dark
-else
-  export NVIM_THEME=light
-fi
+update_nvim_theme() {
+  if defaults read -g AppleInterfaceStyle &>/dev/null; then
+    export NVIM_THEME=dark
+  else
+    export NVIM_THEME=light
+  fi
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd update_nvim_theme   # 每次要顯示 prompt 前都更新一次
+update_nvim_theme                       # 進 shell 先跑一次
+
 
 ##### Spotify Player #####
 alias spotify=spotify_player
@@ -368,3 +375,17 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+##### Lazydocker #####
+alias lzdocker="lazydocker"
+
+##### Randstr #####
+randstr() {
+    local len="$1"
+    if [[ -z "$len" || "$len" -le 0 ]]; then
+        echo "Usage: randstr <length>" >&2
+        return 1
+    fi
+
+    tr -dc 'a-zA-Z0-9' < /dev/urandom | head -c "$len"
+    echo
+}

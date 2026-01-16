@@ -1,7 +1,7 @@
 {
     "plugin": [
         "oh-my-opencode",
-        "opencode-antigravity-auth@1.2.7",
+        "opencode-antigravity-auth@1.2.8",
         "opencode-openai-codex-auth",
     ],
     "$schema": "https://opencode.ai/config.json",
@@ -31,6 +31,11 @@
                 "--server",
                 "http://kali:8888",
             ],
+            "enabled": false,
+        },
+        "Browser MCP": {
+            "type": "local",
+            "command": ["npx", "@browsermcp/mcp@latest"],
             "enabled": false,
         },
     },
