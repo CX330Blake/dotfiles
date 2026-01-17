@@ -1,7 +1,7 @@
 {
     "plugin": [
         "oh-my-opencode",
-        "opencode-antigravity-auth@1.2.8",
+        "opencode-antigravity-auth@1.3.0",
         "opencode-openai-codex-auth",
     ],
     "$schema": "https://opencode.ai/config.json",
@@ -9,11 +9,24 @@
         "Binary Ninja MCP": {
             "type": "local",
             "command": [
-                "/Users/CX330/Library/Application Support/Binary Ninja/plugins/binary_ninja_mcp/.venv/bin/python3",
-                "/Users/CX330/Library/Application Support/Binary Ninja/plugins/binary_ninja_mcp/bridge/binja_mcp_bridge.py",
+                "npx",
+                "-y",
+                "binary-ninja-mcp",
+                "--host",
+                "macbook-air",
+                "--port",
+                "9009",
             ],
             "enabled": true,
         },
+        // "Binary Ninja MCP": {
+        //     "type": "local",
+        //     "command": [
+        //         "/Users/CX330/Library/Application Support/Binary Ninja/plugins/binary_ninja_mcp/.venv/bin/python3",
+        //         "/Users/CX330/Library/Application Support/Binary Ninja/plugins/binary_ninja_mcp/bridge/binja_mcp_bridge.py",
+        //     ],
+        //     "enabled": true,
+        // },
         "Sequential Thinking": {
             "type": "local",
             "command": [

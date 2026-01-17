@@ -33,10 +33,11 @@ $1
 
 ## Rules
 
-- Never run the binary unless you asked me.
+- Never run (execute) the binary unless you asked me
+  - DO NOT run in any type of form
 - Always browse all the strings first
 - Always rename the functions, variables, parameters, etc every time you analyzed a block of code.
-  - if the original name is descriptive enough, you don't need to rename it
+  - not if the original name is descriptive enough, like `main`, `challenge`, unstripped binary's functions, etc
 - Always set the correct enum value for numbers if it's an enum.
 - Always do the type reconstruction to fix the wrong types every time you reviewed a block of code, more specifically:
   - Create the missing type (e.g. struct, enum, union, etc) using Binary Ninja and apply them to the corresponding variable.
