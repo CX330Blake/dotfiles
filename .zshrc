@@ -126,8 +126,8 @@ fi
 alias ts="tailscale"
 alias pve='ssh -Y root@pve'
 alias win='ssh -Y cx330@win10'
-alias kali='ssh -Y cx330@kali'
-alias fedora='ssh -Y cx330@fedora'
+alias kali='mosh cx330@kali'
+alias fedora='mosh cx330@fedora'
 alias affine='ssh -Y cx330@affine'
 alias travel='ssh -Y cx330@travel'
 alias mythic='ssh -Y cx330@mythic'
