@@ -390,4 +390,8 @@ randstr() {
     echo
 }
 
+##### linuxbrew #####
 . "$HOME/.local/bin/env"
+if [[ "$(uname)" == "Linux" ]]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+fi
