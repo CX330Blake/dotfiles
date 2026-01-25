@@ -232,7 +232,7 @@ fromfedora () {
 
 ##### Pwn.college #####
 alias pwnc='ssh -Y hacker@dojo.pwn.college'
-alias pwnc-getchal='scp "hacker@dojo.pwn.college:/challenge/*" ./'
+alias pwnc-getchal='scp -r "hacker@dojo.pwn.college:/challenge/*" ./'
 
 ###### Generated for envman. Do not edit #####
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

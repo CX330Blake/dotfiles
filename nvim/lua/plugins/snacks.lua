@@ -3,6 +3,7 @@ return {
         "snacks.nvim",
         ---@type snacks.Config
         opts = {
+            bigfile = { enabled = true },
             explorer = {},
             indent = { enabled = false },
             notifier = { enabled = false },

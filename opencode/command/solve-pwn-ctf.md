@@ -42,6 +42,7 @@ $2
 
 PLEASE STRICTLY FOLLOW THE RULES BELOW, ANY VIOLATION IS NOT ALLOWED
 
+- Always run `checksec` or `pwn checksec` first.
 - If the challenge already give you the source code, you don't need to use Binary Ninja to reverse it.
 - Remember, dynamic analysis is important for exploit debugging, make good use of GDB via Hexstrike.
 - The host isn't for dynamic analysis, so if you need to run the binary or emulate it via qemu, do it by Hexstrike. Always keep the local environment clean.
