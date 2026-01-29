@@ -7,6 +7,11 @@ return {
             explorer = {},
             indent = { enabled = false },
             notifier = { enabled = false },
+            picker = {
+                layout = {
+                    preset = "telescope",
+                },
+            },
             image = {
                 formats = {
                     "png",
@@ -154,6 +159,22 @@ return {
                 -- },
                 -- You can remove this --
             },
+            -- keys = {
+            --     {
+            --         "<leader>ff",
+            --         function()
+            --             Snacks.picker.files()
+            --         end,
+            --         desc = "Find Files",
+            --     },
+            --     {
+            --         "<leader>fg",
+            --         function()
+            --             Snacks.picker.grep()
+            --         end,
+            --         desc = "Grep",
+            --     },
+            -- },
         },
     },
 }
