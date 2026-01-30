@@ -7,4 +7,5 @@ return {
     { "yetone/avante.nvim", enabled = false },
     { "nvim-neo-tree/neo-tree.nvim", enabled = false },
     { "zaldih/themery.nvim", enabled = false },
+    { "andweeb/presence.nvim", enabled = false },
 }
