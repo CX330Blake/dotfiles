@@ -1,0 +1,17 @@
+# Halloy config.
+#
+# For a complete list of available options,
+# please visit https://halloy.chat/configuration.html
+
+theme = { light = "rose-pine-dawn", dark = "rose-pine" }
+
+[servers.liberachat]
+nickname = "CX330"
+server = "irc.libera.chat"
+channels = ["#halloy"]
+
+[servers.hackint]
+nickname = "CX330"
+server = "irc.hackint.org"
+port = 6697
+use_tls = true

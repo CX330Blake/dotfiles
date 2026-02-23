@@ -230,8 +230,8 @@ fromfedora () {
 
 ##### Flare-VM port forwarding!!! #####
 # Notes:
-# Set the port forwarding to PVE, 
-# then remove the write permission for 
+# Set the port forwarding to PVE,
+# then remove the write permission for
 # Flare-VM RDP by using Windows App
 #######################################
 ##!/bin/bash
@@ -404,3 +404,20 @@ randstr() {
 if [[ "$(uname)" == "Linux" ]]; then
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
 fi
+
+##### backup #####
+backup() {
+  if [ "$#" -eq 0 ]; then
+    echo "Usage: backup <file_or_dir> [more_files_or_dirs...]"
+    return 1
+  fi
+
+  for target in "$@"; do
+    if [ ! -e "$target" ]; then
+      echo "backup: '$target' not found" >&2
+      continue
+    fi
+
+    cp -a -- "$target" "$target.bak"
+  done
+}

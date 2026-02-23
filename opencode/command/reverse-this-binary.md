@@ -27,6 +27,7 @@ Analyze the given binary in Binary Ninja and give an detailed report of what the
 
 The final report should be super detailed and including the outline like the following (these are must-have but you can append other):
 
+- TL;DR
 - Initial Triage
 - Behavioral Overview
   - This part should be more specific and detail so that the reader can easily know what exactly the binary does and the program control flow

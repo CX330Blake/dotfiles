@@ -81,8 +81,8 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Tokyo Night Moon",
-    "dark": "Tokyo Night Storm"
+    "light": "Rosé Pine Dawn",
+    "dark": "Rosé Pine"
   },
   "formatter": "language_server",
   "format_on_save": "on",
