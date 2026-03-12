@@ -1,5 +1,6 @@
 Compose a writeup.md in Traditional Chinese in super detail. It should contain the whole walkthrough of the challenge and every little keypoints. You can use the following outline to write this (but you can append some section if you need):
 
+- TL;DR
 - Recon
 - Analyzing
 - Exploit

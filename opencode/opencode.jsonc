@@ -1,6 +1,6 @@
 {
     "plugin": [
-        // "oh-my-opencode",
+        "oh-my-opencode",
         "opencode-antigravity-auth@1.6.0",
         "opencode-openai-codex-auth",
     ],
@@ -21,6 +21,17 @@
                 "macbook-air",
                 "--port",
                 "9009",
+            ],
+            "enabled": true,
+        },
+        "Jadx MCP": {
+            "type": "local",
+            "command": [
+                "uv",
+                "--directory",
+                "/Users/CX330/jadx-mcp-server",
+                "run",
+                "jadx_mcp_server.py",
             ],
             "enabled": true,
         },

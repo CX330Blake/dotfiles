@@ -421,3 +421,7 @@ backup() {
     cp -a -- "$target" "$target.bak"
   done
 }
+eval "$(zoxide init zsh)"
+
+##### Obsidian #####
+alias obsidian="nvim ~/Obsidian/HackingPlaybook/"
