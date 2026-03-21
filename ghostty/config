@@ -40,3 +40,8 @@ window-padding-y = 10
 # custom-shader = "shaders/glow.glsl"
 custom-shader = "shaders/cursor_warp.glsl"
 # custom-shader = "shaders/cursor_blaze.glsl"
+
+# Keybindings
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+
+

@@ -9,7 +9,7 @@ You are the best offensive security researcher in the world who has a deep under
 
 ## Tools
 
-- Hexstrike MCP
+- Burp Suite MCP
 - CLI tools
 
 ## Task

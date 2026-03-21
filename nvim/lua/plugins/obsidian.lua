@@ -13,5 +13,11 @@ return {
                 path = "~/Obsidian/HackingPlaybook/",
             },
         },
+        templates = {
+            folder = "Templates",
+            date_format = "%Y-%m-%d",
+            time_format = "%H:%M",
+            substitutions = {},
+        },
     },
 }

@@ -1,0 +1,323 @@
+{
+  "version": 3,
+  "skills": {
+    "acquiring-disk-image-with-dd-and-dcfldd": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/acquiring-disk-image-with-dd-and-dcfldd/SKILL.md",
+      "skillFolderHash": "06710b8e41964023c414659842c4d02ffc3bfb83",
+      "installedAt": "2026-03-21T06:27:36.530Z",
+      "updatedAt": "2026-03-21T06:27:36.530Z"
+    },
+    "analyzing-active-directory-acl-abuse": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-active-directory-acl-abuse/SKILL.md",
+      "skillFolderHash": "63a2a7d8c251c01bcb4ef96386ad8be2ff45c553",
+      "installedAt": "2026-03-21T06:27:37.670Z",
+      "updatedAt": "2026-03-21T06:27:37.670Z"
+    },
+    "analyzing-android-malware-with-apktool": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-android-malware-with-apktool/SKILL.md",
+      "skillFolderHash": "53e9fe0f0b8a625f0759b64cf7261f221bf0c5e3",
+      "installedAt": "2026-03-21T06:27:39.287Z",
+      "updatedAt": "2026-03-21T06:27:39.287Z"
+    },
+    "analyzing-api-gateway-access-logs": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-api-gateway-access-logs/SKILL.md",
+      "skillFolderHash": "9813fa9000d331606cfee0b9372a79563905b1e9",
+      "installedAt": "2026-03-21T06:27:40.176Z",
+      "updatedAt": "2026-03-21T06:27:40.176Z"
+    },
+    "analyzing-apt-group-with-mitre-navigator": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-apt-group-with-mitre-navigator/SKILL.md",
+      "skillFolderHash": "46ce9ce0b47fd1b559e20b7e86f7025faf75d71f",
+      "installedAt": "2026-03-21T06:27:41.441Z",
+      "updatedAt": "2026-03-21T06:27:41.441Z"
+    },
+    "analyzing-azure-activity-logs-for-threats": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-azure-activity-logs-for-threats/SKILL.md",
+      "skillFolderHash": "f8b96282ff6f38db0951877bb5a214c0d3dece62",
+      "installedAt": "2026-03-21T06:27:42.644Z",
+      "updatedAt": "2026-03-21T06:27:42.644Z"
+    },
+    "analyzing-bootkit-and-rootkit-samples": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-bootkit-and-rootkit-samples/SKILL.md",
+      "skillFolderHash": "0504fde252cc3cb3d9a8237eac9dd9a8a45622d2",
+      "installedAt": "2026-03-21T06:27:43.817Z",
+      "updatedAt": "2026-03-21T06:27:43.817Z"
+    },
+    "analyzing-browser-forensics-with-hindsight": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-browser-forensics-with-hindsight/SKILL.md",
+      "skillFolderHash": "ac547b9afbded9c159f65d4defba7dde81ada8da",
+      "installedAt": "2026-03-21T06:27:44.621Z",
+      "updatedAt": "2026-03-21T06:27:44.621Z"
+    },
+    "analyzing-campaign-attribution-evidence": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-campaign-attribution-evidence/SKILL.md",
+      "skillFolderHash": "d5ed381c20e8781f72ef4c087515c8302e8c083b",
+      "installedAt": "2026-03-21T06:27:46.256Z",
+      "updatedAt": "2026-03-21T06:27:46.256Z"
+    },
+    "analyzing-certificate-transparency-for-phishing": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-certificate-transparency-for-phishing/SKILL.md",
+      "skillFolderHash": "6a5e5fd97f5de1c0a287818fd7a5ff3de7e25cc5",
+      "installedAt": "2026-03-21T06:27:47.574Z",
+      "updatedAt": "2026-03-21T06:27:47.574Z"
+    },
+    "analyzing-cloud-storage-access-patterns": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-cloud-storage-access-patterns/SKILL.md",
+      "skillFolderHash": "2420d5eaaf39bf45681e95b8692e5924c0eb2581",
+      "installedAt": "2026-03-21T06:27:48.292Z",
+      "updatedAt": "2026-03-21T06:27:48.292Z"
+    },
+    "analyzing-cobalt-strike-beacon-configuration": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-cobalt-strike-beacon-configuration/SKILL.md",
+      "skillFolderHash": "e58a8c771fe04b59a4ccdb2714f63c8d080f4546",
+      "installedAt": "2026-03-21T06:27:49.416Z",
+      "updatedAt": "2026-03-21T06:27:49.416Z"
+    },
+    "analyzing-cobaltstrike-malleable-c2-profiles": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-cobaltstrike-malleable-c2-profiles/SKILL.md",
+      "skillFolderHash": "5e0988aa52f5b5853abb86d5677a2ba58bec8d32",
+      "installedAt": "2026-03-21T06:27:50.142Z",
+      "updatedAt": "2026-03-21T06:27:50.142Z"
+    },
+    "analyzing-command-and-control-communication": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-command-and-control-communication/SKILL.md",
+      "skillFolderHash": "2a5ecf3cc502cd8fe2e69a4db289b316598b3512",
+      "installedAt": "2026-03-21T06:27:51.069Z",
+      "updatedAt": "2026-03-21T06:27:51.069Z"
+    },
+    "analyzing-cyber-kill-chain": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-cyber-kill-chain/SKILL.md",
+      "skillFolderHash": "f2daf34fa3921316b7afab8252dd340e784170a5",
+      "installedAt": "2026-03-21T06:27:51.954Z",
+      "updatedAt": "2026-03-21T06:27:51.954Z"
+    },
+    "analyzing-disk-image-with-autopsy": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-disk-image-with-autopsy/SKILL.md",
+      "skillFolderHash": "94abcac9cd4952736bb2539323f9d238f49687d3",
+      "installedAt": "2026-03-21T06:27:53.712Z",
+      "updatedAt": "2026-03-21T06:27:53.712Z"
+    },
+    "analyzing-dns-logs-for-exfiltration": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-dns-logs-for-exfiltration/SKILL.md",
+      "skillFolderHash": "87a724df0faba18dec18147ea8d322c04c3a03e5",
+      "installedAt": "2026-03-21T06:27:54.879Z",
+      "updatedAt": "2026-03-21T06:27:54.879Z"
+    },
+    "analyzing-docker-container-forensics": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-docker-container-forensics/SKILL.md",
+      "skillFolderHash": "bfe1e80d42a2bffc19f82f983fa7f81d1a922683",
+      "installedAt": "2026-03-21T06:27:56.059Z",
+      "updatedAt": "2026-03-21T06:27:56.059Z"
+    },
+    "analyzing-email-headers-for-phishing-investigation": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-email-headers-for-phishing-investigation/SKILL.md",
+      "skillFolderHash": "2bffb658a42c50526d1dfc3453f677c08733b5e8",
+      "installedAt": "2026-03-21T06:27:57.776Z",
+      "updatedAt": "2026-03-21T06:27:57.776Z"
+    },
+    "analyzing-ethereum-smart-contract-vulnerabilities": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-ethereum-smart-contract-vulnerabilities/SKILL.md",
+      "skillFolderHash": "f462a4980e7eb3432a3e407d8f03bbaa68386c7b",
+      "installedAt": "2026-03-21T06:27:59.073Z",
+      "updatedAt": "2026-03-21T06:27:59.073Z"
+    },
+    "analyzing-golang-malware-with-ghidra": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-golang-malware-with-ghidra/SKILL.md",
+      "skillFolderHash": "6b88f49c00f83d271d13391cddb21f0be3fab574",
+      "installedAt": "2026-03-21T06:28:00.407Z",
+      "updatedAt": "2026-03-21T06:28:00.407Z"
+    },
+    "analyzing-heap-spray-exploitation": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-heap-spray-exploitation/SKILL.md",
+      "skillFolderHash": "37b25e53a640e7502481a5c3b4b5997e366ea296",
+      "installedAt": "2026-03-21T06:28:01.315Z",
+      "updatedAt": "2026-03-21T06:28:01.315Z"
+    },
+    "analyzing-indicators-of-compromise": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-indicators-of-compromise/SKILL.md",
+      "skillFolderHash": "aa8a31ff5795f7793ff71c876e13b60d4889fa24",
+      "installedAt": "2026-03-21T06:28:02.552Z",
+      "updatedAt": "2026-03-21T06:28:02.552Z"
+    },
+    "analyzing-ios-app-security-with-objection": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-ios-app-security-with-objection/SKILL.md",
+      "skillFolderHash": "3682e414b89102f2337e10bb46b79977c053bfda",
+      "installedAt": "2026-03-21T06:28:03.807Z",
+      "updatedAt": "2026-03-21T06:28:03.807Z"
+    },
+    "analyzing-kubernetes-audit-logs": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-kubernetes-audit-logs/SKILL.md",
+      "skillFolderHash": "67e70469e0cc8469386b74eea22713ee6ca0640e",
+      "installedAt": "2026-03-21T06:28:04.891Z",
+      "updatedAt": "2026-03-21T06:28:04.891Z"
+    },
+    "analyzing-linux-audit-logs-for-intrusion": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-linux-audit-logs-for-intrusion/SKILL.md",
+      "skillFolderHash": "eafb8764c1a19a0bd563829ef08fd3b1e8927c4a",
+      "installedAt": "2026-03-21T06:28:06.234Z",
+      "updatedAt": "2026-03-21T06:28:06.234Z"
+    },
+    "analyzing-linux-elf-malware": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-linux-elf-malware/SKILL.md",
+      "skillFolderHash": "5eee0df3cc78b277331fcc652777eff09666438d",
+      "installedAt": "2026-03-21T06:28:07.494Z",
+      "updatedAt": "2026-03-21T06:28:07.494Z"
+    },
+    "analyzing-linux-kernel-rootkits": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-linux-kernel-rootkits/SKILL.md",
+      "skillFolderHash": "5b8f7674677eb968b629f7399282536e9ad3bbbd",
+      "installedAt": "2026-03-21T06:28:08.663Z",
+      "updatedAt": "2026-03-21T06:28:08.663Z"
+    },
+    "analyzing-linux-system-artifacts": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-linux-system-artifacts/SKILL.md",
+      "skillFolderHash": "eb41f9f9b6c4b2e6cdd4f1414ade5bef4ebb8d8c",
+      "installedAt": "2026-03-21T06:28:10.040Z",
+      "updatedAt": "2026-03-21T06:28:10.040Z"
+    },
+    "analyzing-lnk-file-and-jump-list-artifacts": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-lnk-file-and-jump-list-artifacts/SKILL.md",
+      "skillFolderHash": "60d863ca6a24a4ec0742942d952be8a25bf8e3f4",
+      "installedAt": "2026-03-21T06:28:11.009Z",
+      "updatedAt": "2026-03-21T06:28:11.009Z"
+    },
+    "analyzing-macro-malware-in-office-documents": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-macro-malware-in-office-documents/SKILL.md",
+      "skillFolderHash": "88654d2b2fb02dd876619faeb32b06b85e2a9949",
+      "installedAt": "2026-03-21T06:28:12.273Z",
+      "updatedAt": "2026-03-21T06:28:12.273Z"
+    },
+    "analyzing-malicious-pdf-with-peepdf": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-malicious-pdf-with-peepdf/SKILL.md",
+      "skillFolderHash": "906ff60b4660c9e079dd141e2738bd31764d4843",
+      "installedAt": "2026-03-21T06:28:13.486Z",
+      "updatedAt": "2026-03-21T06:28:13.486Z"
+    },
+    "analyzing-malicious-url-with-urlscan": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-malicious-url-with-urlscan/SKILL.md",
+      "skillFolderHash": "ba67fb2782b765a621f10367dbecdccf3f5183ea",
+      "installedAt": "2026-03-21T06:28:14.888Z",
+      "updatedAt": "2026-03-21T06:28:14.888Z"
+    },
+    "analyzing-malware-behavior-with-cuckoo-sandbox": {
+      "source": "mukul975/Anthropic-Cybersecurity-Skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills.git",
+      "skillPath": "skills/analyzing-malware-behavior-with-cuckoo-sandbox/SKILL.md",
+      "skillFolderHash": "25805b3886c334d67e8f5014a403a6bd14250a5e",
+      "installedAt": "2026-03-21T06:28:16.357Z",
+      "updatedAt": "2026-03-21T06:28:16.357Z"
+    }
+  },
+  "dismissed": {},
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "warp"
+  ]
+}

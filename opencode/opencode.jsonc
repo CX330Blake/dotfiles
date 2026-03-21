@@ -6,10 +6,20 @@
     ],
     "$schema": "https://opencode.ai/config.json",
     "mcp": {
+        "Burp Suite": {
+            "type": "remote",
+            "url": "http://127.0.0.1:9876",
+            "enabled": true,
+        },
+        "Excalidraw": {
+            "type": "remote",
+            "url": "https://excalidraw-mcp-app.vercel.app/mcp",
+            "enabled": true,
+        },
         "Playwright": {
             "type": "local",
             "command": ["npx", "@playwright/mcp@latest", "--extension"],
-            "enabled": true,
+            "enabled": false,
         },
         "Binary Ninja MCP": {
             "type": "local",
