@@ -6,6 +6,15 @@
     ],
     "$schema": "https://opencode.ai/config.json",
     "mcp": {
+        "Obsidian": {
+            "type": "local",
+            "command": [
+                "/Users/CX330/Obsidian/HackingPlaybook/.obsidian/plugins/mcp-tools/bin/mcp-server",
+            ],
+            "environment": {
+                "OBSIDIAN_API_KEY": "file:./.obsidian_api_key",
+            },
+        },
         "Burp Suite": {
             "type": "remote",
             "url": "http://127.0.0.1:9876",
