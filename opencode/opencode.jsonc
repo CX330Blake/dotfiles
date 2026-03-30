@@ -1,6 +1,6 @@
 {
     "plugin": [
-        "oh-my-opencode",
+        // "oh-my-opencode",
         "opencode-antigravity-auth@1.6.0",
         "opencode-openai-codex-auth",
     ],
@@ -8,12 +8,17 @@
     "mcp": {
         "Obsidian": {
             "type": "local",
-            "command": [
-                "/Users/CX330/Obsidian/HackingPlaybook/.obsidian/plugins/mcp-tools/bin/mcp-server",
-            ],
+            "command": ["uvx", "mcp-obsidian"],
             "environment": {
-                "OBSIDIAN_API_KEY": "file:./.obsidian_api_key",
+                "OBSIDIAN_API_KEY": "{file:/Users/CX330/Working/GitProjects/dotfiles/opencode/.obsidian_api_key}",
+                "OBSIDIAN_HOST": "127.0.0.1",
+                "OBSIDIAN_PORT": "27124",
             },
+        },
+        "Zotero": {
+            "type": "local",
+            "command": ["zotero-mcp"],
+            "environment": { "ZOTERO_LOCAL": "true" },
         },
         "Burp Suite": {
             "type": "remote",

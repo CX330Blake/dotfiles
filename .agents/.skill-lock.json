@@ -306,14 +306,1777 @@
       "skillFolderHash": "25805b3886c334d67e8f5014a403a6bd14250a5e",
       "installedAt": "2026-03-21T06:28:16.357Z",
       "updatedAt": "2026-03-21T06:28:16.357Z"
+    },
+    "defuddle": {
+      "source": "git@github.com:kepano/obsidian-skills.git",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:kepano/obsidian-skills.git",
+      "skillPath": "skills/defuddle/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-21T07:40:12.607Z",
+      "updatedAt": "2026-03-21T07:40:12.607Z"
+    },
+    "json-canvas": {
+      "source": "git@github.com:kepano/obsidian-skills.git",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:kepano/obsidian-skills.git",
+      "skillPath": "skills/json-canvas/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-21T07:40:12.609Z",
+      "updatedAt": "2026-03-21T07:40:12.609Z"
+    },
+    "obsidian-bases": {
+      "source": "git@github.com:kepano/obsidian-skills.git",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-bases/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-21T07:40:12.609Z",
+      "updatedAt": "2026-03-21T07:40:12.609Z"
+    },
+    "obsidian-cli": {
+      "source": "git@github.com:kepano/obsidian-skills.git",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-cli/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-21T07:40:12.610Z",
+      "updatedAt": "2026-03-21T07:40:12.610Z"
+    },
+    "obsidian-markdown": {
+      "source": "git@github.com:kepano/obsidian-skills.git",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-markdown/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-21T07:40:12.610Z",
+      "updatedAt": "2026-03-21T07:40:12.610Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
+      "installedAt": "2026-03-21T07:40:26.955Z",
+      "updatedAt": "2026-03-21T07:40:26.955Z"
+    },
+    "excalidraw-diagram": {
+      "source": "axtonliu/axton-obsidian-visual-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/axtonliu/axton-obsidian-visual-skills.git",
+      "skillPath": "excalidraw-diagram/SKILL.md",
+      "skillFolderHash": "dc5677963e87e5d9a1c9b31ccd2bf995b8a63078",
+      "pluginName": "obsidian-visual-skills",
+      "installedAt": "2026-03-21T08:22:31.159Z",
+      "updatedAt": "2026-03-21T08:22:31.159Z"
+    },
+    "mermaid-visualizer": {
+      "source": "axtonliu/axton-obsidian-visual-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/axtonliu/axton-obsidian-visual-skills.git",
+      "skillPath": "mermaid-visualizer/SKILL.md",
+      "skillFolderHash": "55a0115c2bc2c6b21d71b5d3a2be09d33fbe91d1",
+      "pluginName": "obsidian-visual-skills",
+      "installedAt": "2026-03-21T08:22:31.772Z",
+      "updatedAt": "2026-03-21T08:22:31.772Z"
+    },
+    "obsidian-canvas-creator": {
+      "source": "axtonliu/axton-obsidian-visual-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/axtonliu/axton-obsidian-visual-skills.git",
+      "skillPath": "obsidian-canvas-creator/SKILL.md",
+      "skillFolderHash": "d3ad114c28c7d8a52bdf34784d4f9086778a8dec",
+      "pluginName": "obsidian-visual-skills",
+      "installedAt": "2026-03-21T08:22:32.280Z",
+      "updatedAt": "2026-03-21T08:22:32.280Z"
+    },
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/blader/humanizer.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "12881abf6671c4ab62eceeb56f911b752f9fd6d2",
+      "installedAt": "2026-03-22T15:12:55.057Z",
+      "updatedAt": "2026-03-22T15:12:55.057Z"
+    },
+    "adaptyv": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/adaptyv/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.140Z",
+      "updatedAt": "2026-03-28T15:29:42.140Z"
+    },
+    "aeon": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/aeon/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.145Z",
+      "updatedAt": "2026-03-28T15:29:42.145Z"
+    },
+    "alphafold-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/alphafold-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.147Z",
+      "updatedAt": "2026-03-28T15:29:42.147Z"
+    },
+    "anndata": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/anndata/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.147Z",
+      "updatedAt": "2026-03-28T15:29:42.147Z"
+    },
+    "arboreto": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/arboreto/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.147Z",
+      "updatedAt": "2026-03-28T15:29:42.147Z"
+    },
+    "arxiv-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/arxiv-database/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-28T15:29:42.148Z",
+      "updatedAt": "2026-03-28T15:29:42.148Z"
+    },
+    "astropy": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/astropy/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.148Z",
+      "updatedAt": "2026-03-28T15:29:42.148Z"
+    },
+    "benchling-integration": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/benchling-integration/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.149Z",
+      "updatedAt": "2026-03-28T15:29:42.149Z"
+    },
+    "bgpt-paper-search": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/bgpt-paper-search/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.150Z",
+      "updatedAt": "2026-03-28T15:29:42.150Z"
+    },
+    "bindingdb-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/bindingdb-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.150Z",
+      "updatedAt": "2026-03-28T15:29:42.150Z"
+    },
+    "biopython": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/biopython/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.151Z",
+      "updatedAt": "2026-03-28T15:29:42.151Z"
+    },
+    "biorxiv-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/biorxiv-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.151Z",
+      "updatedAt": "2026-03-28T15:29:42.151Z"
+    },
+    "bioservices": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/bioservices/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.152Z",
+      "updatedAt": "2026-03-28T15:29:42.152Z"
+    },
+    "brenda-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/brenda-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.152Z",
+      "updatedAt": "2026-03-28T15:29:42.152Z"
+    },
+    "cbioportal-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/cbioportal-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.152Z",
+      "updatedAt": "2026-03-28T15:29:42.152Z"
+    },
+    "cellxgene-census": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/cellxgene-census/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.153Z",
+      "updatedAt": "2026-03-28T15:29:42.153Z"
+    },
+    "chembl-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/chembl-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.153Z",
+      "updatedAt": "2026-03-28T15:29:42.153Z"
+    },
+    "cirq": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/cirq/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.154Z",
+      "updatedAt": "2026-03-28T15:29:42.154Z"
+    },
+    "citation-management": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/citation-management/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.154Z",
+      "updatedAt": "2026-03-28T15:29:42.154Z"
+    },
+    "clinical-decision-support": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/clinical-decision-support/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.154Z",
+      "updatedAt": "2026-03-28T15:29:42.154Z"
+    },
+    "clinical-reports": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/clinical-reports/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.155Z",
+      "updatedAt": "2026-03-28T15:29:42.155Z"
+    },
+    "clinicaltrials-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/clinicaltrials-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.155Z",
+      "updatedAt": "2026-03-28T15:29:42.155Z"
+    },
+    "clinpgx-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/clinpgx-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.156Z",
+      "updatedAt": "2026-03-28T15:29:42.156Z"
+    },
+    "clinvar-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/clinvar-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.156Z",
+      "updatedAt": "2026-03-28T15:29:42.156Z"
+    },
+    "cobrapy": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/cobrapy/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.157Z",
+      "updatedAt": "2026-03-28T15:29:42.157Z"
+    },
+    "consciousness-council": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/consciousness-council/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.157Z",
+      "updatedAt": "2026-03-28T15:29:42.157Z"
+    },
+    "cosmic-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/cosmic-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.157Z",
+      "updatedAt": "2026-03-28T15:29:42.157Z"
+    },
+    "dask": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/dask/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.158Z",
+      "updatedAt": "2026-03-28T15:29:42.158Z"
+    },
+    "datacommons-client": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/datacommons-client/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.158Z",
+      "updatedAt": "2026-03-28T15:29:42.158Z"
+    },
+    "datamol": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/datamol/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.159Z",
+      "updatedAt": "2026-03-28T15:29:42.159Z"
+    },
+    "deepchem": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/deepchem/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.159Z",
+      "updatedAt": "2026-03-28T15:29:42.159Z"
+    },
+    "deeptools": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/deeptools/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.160Z",
+      "updatedAt": "2026-03-28T15:29:42.160Z"
+    },
+    "denario": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/denario/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.160Z",
+      "updatedAt": "2026-03-28T15:29:42.160Z"
+    },
+    "depmap": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/depmap/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.161Z",
+      "updatedAt": "2026-03-28T15:29:42.161Z"
+    },
+    "dhdna-profiler": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/dhdna-profiler/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.161Z",
+      "updatedAt": "2026-03-28T15:29:42.161Z"
+    },
+    "diffdock": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/diffdock/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.162Z",
+      "updatedAt": "2026-03-28T15:29:42.162Z"
+    },
+    "dnanexus-integration": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/dnanexus-integration/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.162Z",
+      "updatedAt": "2026-03-28T15:29:42.162Z"
+    },
+    "docx": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/docx/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.162Z",
+      "updatedAt": "2026-03-28T15:29:42.162Z"
+    },
+    "drugbank-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/drugbank-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.163Z",
+      "updatedAt": "2026-03-28T15:29:42.163Z"
+    },
+    "ena-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/ena-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.164Z",
+      "updatedAt": "2026-03-28T15:29:42.164Z"
+    },
+    "ensembl-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/ensembl-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.164Z",
+      "updatedAt": "2026-03-28T15:29:42.164Z"
+    },
+    "esm": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/esm/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.165Z",
+      "updatedAt": "2026-03-28T15:29:42.165Z"
+    },
+    "etetoolkit": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/etetoolkit/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.165Z",
+      "updatedAt": "2026-03-28T15:29:42.165Z"
+    },
+    "exploratory-data-analysis": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/exploratory-data-analysis/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.166Z",
+      "updatedAt": "2026-03-28T15:29:42.166Z"
+    },
+    "fda-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/fda-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.167Z",
+      "updatedAt": "2026-03-28T15:29:42.167Z"
+    },
+    "flowio": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/flowio/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.167Z",
+      "updatedAt": "2026-03-28T15:29:42.167Z"
+    },
+    "fluidsim": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/fluidsim/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.168Z",
+      "updatedAt": "2026-03-28T15:29:42.168Z"
+    },
+    "gene-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/gene-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.169Z",
+      "updatedAt": "2026-03-28T15:29:42.169Z"
+    },
+    "generate-image": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/generate-image/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.169Z",
+      "updatedAt": "2026-03-28T15:29:42.169Z"
+    },
+    "geniml": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/geniml/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.170Z",
+      "updatedAt": "2026-03-28T15:29:42.170Z"
+    },
+    "geo-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/geo-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.170Z",
+      "updatedAt": "2026-03-28T15:29:42.170Z"
+    },
+    "geomaster": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/geomaster/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.171Z",
+      "updatedAt": "2026-03-28T15:29:42.171Z"
+    },
+    "geopandas": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/geopandas/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.171Z",
+      "updatedAt": "2026-03-28T15:29:42.171Z"
+    },
+    "get-available-resources": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/get-available-resources/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.172Z",
+      "updatedAt": "2026-03-28T15:29:42.172Z"
+    },
+    "gget": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/gget/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.172Z",
+      "updatedAt": "2026-03-28T15:29:42.172Z"
+    },
+    "ginkgo-cloud-lab": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/ginkgo-cloud-lab/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.173Z",
+      "updatedAt": "2026-03-28T15:29:42.173Z"
+    },
+    "glycoengineering": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/glycoengineering/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.173Z",
+      "updatedAt": "2026-03-28T15:29:42.173Z"
+    },
+    "gnomad-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/gnomad-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.174Z",
+      "updatedAt": "2026-03-28T15:29:42.174Z"
+    },
+    "gtars": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/gtars/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.175Z",
+      "updatedAt": "2026-03-28T15:29:42.175Z"
+    },
+    "gtex-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/gtex-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.175Z",
+      "updatedAt": "2026-03-28T15:29:42.175Z"
+    },
+    "gwas-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/gwas-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.176Z",
+      "updatedAt": "2026-03-28T15:29:42.176Z"
+    },
+    "histolab": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/histolab/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.177Z",
+      "updatedAt": "2026-03-28T15:29:42.177Z"
+    },
+    "hmdb-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/hmdb-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.178Z",
+      "updatedAt": "2026-03-28T15:29:42.178Z"
+    },
+    "hypogenic": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/hypogenic/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.178Z",
+      "updatedAt": "2026-03-28T15:29:42.178Z"
+    },
+    "hypothesis-generation": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/hypothesis-generation/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.179Z",
+      "updatedAt": "2026-03-28T15:29:42.179Z"
+    },
+    "imaging-data-commons": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/imaging-data-commons/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.179Z",
+      "updatedAt": "2026-03-28T15:29:42.179Z"
+    },
+    "infographics": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/infographics/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.180Z",
+      "updatedAt": "2026-03-28T15:29:42.180Z"
+    },
+    "interpro-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/interpro-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.181Z",
+      "updatedAt": "2026-03-28T15:29:42.181Z"
+    },
+    "iso-13485-certification": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/iso-13485-certification/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.181Z",
+      "updatedAt": "2026-03-28T15:29:42.181Z"
+    },
+    "jaspar-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/jaspar-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.182Z",
+      "updatedAt": "2026-03-28T15:29:42.182Z"
+    },
+    "kegg-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/kegg-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.183Z",
+      "updatedAt": "2026-03-28T15:29:42.183Z"
+    },
+    "labarchive-integration": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/labarchive-integration/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.183Z",
+      "updatedAt": "2026-03-28T15:29:42.183Z"
+    },
+    "lamindb": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/lamindb/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.184Z",
+      "updatedAt": "2026-03-28T15:29:42.184Z"
+    },
+    "latchbio-integration": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/latchbio-integration/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.185Z",
+      "updatedAt": "2026-03-28T15:29:42.185Z"
+    },
+    "latex-posters": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/latex-posters/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.185Z",
+      "updatedAt": "2026-03-28T15:29:42.185Z"
+    },
+    "literature-review": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/literature-review/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.186Z",
+      "updatedAt": "2026-03-28T15:29:42.186Z"
+    },
+    "markdown-mermaid-writing": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/markdown-mermaid-writing/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.187Z",
+      "updatedAt": "2026-03-28T15:29:42.187Z"
+    },
+    "market-research-reports": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/market-research-reports/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.187Z",
+      "updatedAt": "2026-03-28T15:29:42.187Z"
+    },
+    "markitdown": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/markitdown/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.188Z",
+      "updatedAt": "2026-03-28T15:29:42.188Z"
+    },
+    "matchms": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/matchms/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.188Z",
+      "updatedAt": "2026-03-28T15:29:42.188Z"
+    },
+    "matplotlib": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/matplotlib/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.190Z",
+      "updatedAt": "2026-03-28T15:29:42.190Z"
+    },
+    "medchem": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/medchem/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.190Z",
+      "updatedAt": "2026-03-28T15:29:42.190Z"
+    },
+    "metabolomics-workbench-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/metabolomics-workbench-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.191Z",
+      "updatedAt": "2026-03-28T15:29:42.191Z"
+    },
+    "modal": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/modal/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.191Z",
+      "updatedAt": "2026-03-28T15:29:42.191Z"
+    },
+    "molecular-dynamics": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/molecular-dynamics/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.192Z",
+      "updatedAt": "2026-03-28T15:29:42.192Z"
+    },
+    "molfeat": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/molfeat/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.193Z",
+      "updatedAt": "2026-03-28T15:29:42.193Z"
+    },
+    "monarch-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/monarch-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.193Z",
+      "updatedAt": "2026-03-28T15:29:42.193Z"
+    },
+    "networkx": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/networkx/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.194Z",
+      "updatedAt": "2026-03-28T15:29:42.194Z"
+    },
+    "neurokit2": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/neurokit2/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.194Z",
+      "updatedAt": "2026-03-28T15:29:42.194Z"
+    },
+    "neuropixels-analysis": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/neuropixels-analysis/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.195Z",
+      "updatedAt": "2026-03-28T15:29:42.195Z"
+    },
+    "omero-integration": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/omero-integration/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.196Z",
+      "updatedAt": "2026-03-28T15:29:42.196Z"
+    },
+    "openalex-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/openalex-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.198Z",
+      "updatedAt": "2026-03-28T15:29:42.198Z"
+    },
+    "opentargets-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/opentargets-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.198Z",
+      "updatedAt": "2026-03-28T15:29:42.198Z"
+    },
+    "opentrons-integration": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/opentrons-integration/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.199Z",
+      "updatedAt": "2026-03-28T15:29:42.199Z"
+    },
+    "paper-2-web": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/paper-2-web/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.199Z",
+      "updatedAt": "2026-03-28T15:29:42.199Z"
+    },
+    "parallel-web": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/parallel-web/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.200Z",
+      "updatedAt": "2026-03-28T15:29:42.200Z"
+    },
+    "pathml": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pathml/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.201Z",
+      "updatedAt": "2026-03-28T15:29:42.201Z"
+    },
+    "pdb-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pdb-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.201Z",
+      "updatedAt": "2026-03-28T15:29:42.201Z"
+    },
+    "pdf": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pdf/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.202Z",
+      "updatedAt": "2026-03-28T15:29:42.202Z"
+    },
+    "peer-review": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/peer-review/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.203Z",
+      "updatedAt": "2026-03-28T15:29:42.203Z"
+    },
+    "pennylane": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pennylane/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.203Z",
+      "updatedAt": "2026-03-28T15:29:42.203Z"
+    },
+    "perplexity-search": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/perplexity-search/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.204Z",
+      "updatedAt": "2026-03-28T15:29:42.204Z"
+    },
+    "phylogenetics": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/phylogenetics/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.205Z",
+      "updatedAt": "2026-03-28T15:29:42.205Z"
+    },
+    "plotly": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/plotly/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.206Z",
+      "updatedAt": "2026-03-28T15:29:42.206Z"
+    },
+    "polars": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/polars/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.206Z",
+      "updatedAt": "2026-03-28T15:29:42.206Z"
+    },
+    "polars-bio": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/polars-bio/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-28T15:29:42.207Z",
+      "updatedAt": "2026-03-28T15:29:42.207Z"
+    },
+    "pptx": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pptx/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.208Z",
+      "updatedAt": "2026-03-28T15:29:42.208Z"
+    },
+    "pptx-posters": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pptx-posters/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.209Z",
+      "updatedAt": "2026-03-28T15:29:42.209Z"
+    },
+    "primekg": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/primekg/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-28T15:29:42.209Z",
+      "updatedAt": "2026-03-28T15:29:42.209Z"
+    },
+    "protocolsio-integration": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/protocolsio-integration/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.210Z",
+      "updatedAt": "2026-03-28T15:29:42.210Z"
+    },
+    "pubchem-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pubchem-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.212Z",
+      "updatedAt": "2026-03-28T15:29:42.212Z"
+    },
+    "pubmed-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pubmed-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.213Z",
+      "updatedAt": "2026-03-28T15:29:42.213Z"
+    },
+    "pufferlib": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pufferlib/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.214Z",
+      "updatedAt": "2026-03-28T15:29:42.214Z"
+    },
+    "pydeseq2": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pydeseq2/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.214Z",
+      "updatedAt": "2026-03-28T15:29:42.214Z"
+    },
+    "pydicom": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pydicom/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.215Z",
+      "updatedAt": "2026-03-28T15:29:42.215Z"
+    },
+    "pyhealth": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pyhealth/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.216Z",
+      "updatedAt": "2026-03-28T15:29:42.216Z"
+    },
+    "pylabrobot": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pylabrobot/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.217Z",
+      "updatedAt": "2026-03-28T15:29:42.217Z"
+    },
+    "pymatgen": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pymatgen/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.217Z",
+      "updatedAt": "2026-03-28T15:29:42.217Z"
+    },
+    "pymc": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pymc/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.218Z",
+      "updatedAt": "2026-03-28T15:29:42.218Z"
+    },
+    "pymoo": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pymoo/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.219Z",
+      "updatedAt": "2026-03-28T15:29:42.219Z"
+    },
+    "pyopenms": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pyopenms/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.220Z",
+      "updatedAt": "2026-03-28T15:29:42.220Z"
+    },
+    "pysam": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pysam/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.220Z",
+      "updatedAt": "2026-03-28T15:29:42.220Z"
+    },
+    "pytdc": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pytdc/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.221Z",
+      "updatedAt": "2026-03-28T15:29:42.221Z"
+    },
+    "pytorch-lightning": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pytorch-lightning/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.222Z",
+      "updatedAt": "2026-03-28T15:29:42.222Z"
+    },
+    "pyzotero": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/pyzotero/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.223Z",
+      "updatedAt": "2026-03-28T15:29:42.223Z"
+    },
+    "qiskit": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/qiskit/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.223Z",
+      "updatedAt": "2026-03-28T15:29:42.223Z"
+    },
+    "qutip": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/qutip/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.224Z",
+      "updatedAt": "2026-03-28T15:29:42.224Z"
+    },
+    "rdkit": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/rdkit/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.225Z",
+      "updatedAt": "2026-03-28T15:29:42.225Z"
+    },
+    "reactome-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/reactome-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.226Z",
+      "updatedAt": "2026-03-28T15:29:42.226Z"
+    },
+    "research-grants": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/research-grants/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.226Z",
+      "updatedAt": "2026-03-28T15:29:42.226Z"
+    },
+    "research-lookup": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/research-lookup/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.227Z",
+      "updatedAt": "2026-03-28T15:29:42.227Z"
+    },
+    "scanpy": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scanpy/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.229Z",
+      "updatedAt": "2026-03-28T15:29:42.229Z"
+    },
+    "scholar-evaluation": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scholar-evaluation/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.229Z",
+      "updatedAt": "2026-03-28T15:29:42.229Z"
+    },
+    "scientific-brainstorming": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scientific-brainstorming/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.230Z",
+      "updatedAt": "2026-03-28T15:29:42.230Z"
+    },
+    "scientific-critical-thinking": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scientific-critical-thinking/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.231Z",
+      "updatedAt": "2026-03-28T15:29:42.231Z"
+    },
+    "scientific-schematics": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scientific-schematics/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.232Z",
+      "updatedAt": "2026-03-28T15:29:42.232Z"
+    },
+    "scientific-slides": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scientific-slides/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.233Z",
+      "updatedAt": "2026-03-28T15:29:42.233Z"
+    },
+    "scientific-visualization": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scientific-visualization/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.234Z",
+      "updatedAt": "2026-03-28T15:29:42.234Z"
+    },
+    "scientific-writing": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scientific-writing/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.235Z",
+      "updatedAt": "2026-03-28T15:29:42.235Z"
+    },
+    "scikit-bio": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scikit-bio/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.235Z",
+      "updatedAt": "2026-03-28T15:29:42.235Z"
+    },
+    "scikit-learn": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scikit-learn/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.236Z",
+      "updatedAt": "2026-03-28T15:29:42.236Z"
+    },
+    "scikit-survival": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scikit-survival/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.237Z",
+      "updatedAt": "2026-03-28T15:29:42.237Z"
+    },
+    "scvelo": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scvelo/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.238Z",
+      "updatedAt": "2026-03-28T15:29:42.238Z"
+    },
+    "scvi-tools": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/scvi-tools/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.238Z",
+      "updatedAt": "2026-03-28T15:29:42.238Z"
+    },
+    "seaborn": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/seaborn/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.239Z",
+      "updatedAt": "2026-03-28T15:29:42.239Z"
+    },
+    "shap": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/shap/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.240Z",
+      "updatedAt": "2026-03-28T15:29:42.240Z"
+    },
+    "simpy": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/simpy/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.241Z",
+      "updatedAt": "2026-03-28T15:29:42.241Z"
+    },
+    "stable-baselines3": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/stable-baselines3/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.242Z",
+      "updatedAt": "2026-03-28T15:29:42.242Z"
+    },
+    "statistical-analysis": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/statistical-analysis/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.243Z",
+      "updatedAt": "2026-03-28T15:29:42.243Z"
+    },
+    "statsmodels": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/statsmodels/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.243Z",
+      "updatedAt": "2026-03-28T15:29:42.243Z"
+    },
+    "string-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/string-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.244Z",
+      "updatedAt": "2026-03-28T15:29:42.244Z"
+    },
+    "sympy": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/sympy/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.245Z",
+      "updatedAt": "2026-03-28T15:29:42.245Z"
+    },
+    "timesfm-forecasting": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/timesfm-forecasting/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.247Z",
+      "updatedAt": "2026-03-28T15:29:42.247Z"
+    },
+    "torch-geometric": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/torch-geometric/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.248Z",
+      "updatedAt": "2026-03-28T15:29:42.248Z"
+    },
+    "torchdrug": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/torchdrug/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.248Z",
+      "updatedAt": "2026-03-28T15:29:42.248Z"
+    },
+    "transformers": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/transformers/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.249Z",
+      "updatedAt": "2026-03-28T15:29:42.249Z"
+    },
+    "treatment-plans": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/treatment-plans/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.250Z",
+      "updatedAt": "2026-03-28T15:29:42.250Z"
+    },
+    "umap-learn": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/umap-learn/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.251Z",
+      "updatedAt": "2026-03-28T15:29:42.251Z"
+    },
+    "uniprot-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/uniprot-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.252Z",
+      "updatedAt": "2026-03-28T15:29:42.252Z"
+    },
+    "uspto-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/uspto-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.254Z",
+      "updatedAt": "2026-03-28T15:29:42.254Z"
+    },
+    "vaex": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/vaex/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.255Z",
+      "updatedAt": "2026-03-28T15:29:42.255Z"
+    },
+    "venue-templates": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/venue-templates/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.256Z",
+      "updatedAt": "2026-03-28T15:29:42.256Z"
+    },
+    "what-if-oracle": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/what-if-oracle/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.257Z",
+      "updatedAt": "2026-03-28T15:29:42.257Z"
+    },
+    "writing": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/writing/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-03-28T15:29:42.257Z",
+      "updatedAt": "2026-03-28T15:29:42.257Z"
+    },
+    "xlsx": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/xlsx/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.258Z",
+      "updatedAt": "2026-03-28T15:29:42.258Z"
+    },
+    "zarr-python": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/zarr-python/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.259Z",
+      "updatedAt": "2026-03-28T15:29:42.259Z"
+    },
+    "zinc-database": {
+      "source": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "sourceType": "git",
+      "sourceUrl": "git@github.com:K-Dense-AI/claude-scientific-skills",
+      "skillPath": "scientific-skills/zinc-database/SKILL.md",
+      "skillFolderHash": "",
+      "pluginName": "scientific-skills",
+      "installedAt": "2026-03-28T15:29:42.260Z",
+      "updatedAt": "2026-03-28T15:29:42.260Z"
     }
   },
-  "dismissed": {},
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
   "lastSelectedAgents": [
     "amp",
+    "antigravity",
     "cline",
     "codex",
     "cursor",
+    "deepagents",
     "gemini-cli",
     "github-copilot",
     "kimi-cli",
