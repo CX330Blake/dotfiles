@@ -7,9 +7,9 @@ agent: build
 
 Make a academic document of the paper highlight direct important quotes and ideas. Be in depth, make no use of bullet points, add direct quotes from the text. Explain this paper to me in depth using the Feynman technique, as if you were its author.
 
-You should create a high quality notes in "Fleeting Notes" folder in Obsidian with the filename as `<paper_title>` (replace ":" with "-", e.g. "aaa: bbb ccc ddd" -> "aaa - bbb ccc ddd"). Also, you should insert the note with a template called "Fleeting Notes" in Obsidian. Use the original title in the template's front matter, don't need to replace ":" with "-".
+You should create a high quality notes in "Fleeting Notes" folder in Obsidian with the filename as `<paper_title>` (replace ":" with "-", e.g. "aaa: bbb ccc ddd" -> "aaa - bbb ccc ddd"). Also, you should insert the note with a template called "Fleeting Notes" in Obsidian.
 
-Summarize each section in the paper first (section by section, so the outline will be the same as the original paper to give reader an overview of the whole paper), then add other in depth notes/ideas at the end.
+Summarize each section in the paper first (section by section, so the outline will be the same as the original paper to give reader an overview of the whole paper), then add other in depth notes/ideas at the end. Include every technical detail in each section!
 
 ## Target paper
 
