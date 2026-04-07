@@ -7,9 +7,13 @@ agent: build
 
 Make a academic document of the paper highlight direct important quotes and ideas. Be in depth, make no use of bullet points, add direct quotes from the text. Explain this paper to me in depth using the Feynman technique, as if you were its author.
 
-You should create a high quality notes in "Fleeting Notes" folder in Obsidian with the filename as `<paper_title>` (replace ":" with "-", e.g. "aaa: bbb ccc ddd" -> "aaa - bbb ccc ddd"). Also, you should insert the note with a template called "Fleeting Notes" in Obsidian.
-
 Summarize each section in the paper first (section by section, so the outline will be the same as the original paper to give reader an overview of the whole paper), then add other in depth notes/ideas at the end. Include every technical detail in each section!
+
+## Filename & File path
+
+You should create a high quality notes in "Fleeting Notes" folder in Obsidian with the filename as the citekey in Zotero, and give it an alias with the title of the paper (but use the citekey as the title as well).
+
+Also, you should insert the note with a template called "Fleeting Notes" in Obsidian.
 
 ## Target paper
 
@@ -22,11 +26,12 @@ The output format should be in markdown. I want it to be sectioned report with c
 ## Rules & Notes
 
 - In Traditional Chinese
+- Use Obsidian CLI to interact with Obsidian (`Obsidian --help`)
 - Cover entire paper content
 - Include both critical evaluation and explanatory breakdowns
+- Don't use the quotation mark for quotes, just use markdown `>` syntax
 - Only add "paper-notes" and "fleeting-notes" to the tags in metadata, I'll add others in Obsidian on my own
-- Do NOT add items to "sources" in the metadata of the notes in Obsidian
-    - Only keep those in the template originally
+- You should add the zotero link to the "sources" field in the front matter.
 - Only keep the title in the metadata, instead of in the content (since that way Obsidian will parse it twice)
 - Latex & footnotes are supported
 - If there are any assets you think are important, include them in the note

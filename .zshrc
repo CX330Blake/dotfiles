@@ -424,4 +424,4 @@ backup() {
 eval "$(zoxide init zsh)"
 
 ##### Obsidian #####
-alias obsidian="nvim ~/Obsidian/HackingPlaybook/"
+alias ovim="nvim ~/Obsidian/HackingPlaybook/"
