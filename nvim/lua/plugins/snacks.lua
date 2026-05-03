@@ -1,6 +1,22 @@
 return {
     {
         "snacks.nvim",
+        keys = {
+            {
+                "<leader>e",
+                function()
+                    Snacks.explorer({ cwd = LazyVim.root() })
+                end,
+                desc = "Explorer Snacks (Root Dir)",
+            },
+            {
+                "<leader>E",
+                function()
+                    Snacks.explorer()
+                end,
+                desc = "Explorer Snacks (Cwd)",
+            },
+        },
         ---@type snacks.Config
         opts = {
             bigfile = { enabled = true },
