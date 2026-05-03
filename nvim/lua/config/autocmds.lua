@@ -22,3 +22,53 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt_local.linebreak = true
     end,
 })
+
+local snacks_dashboard_group = vim.api.nvim_create_augroup("open_snacks_dashboard_when_empty", { clear = true })
+local is_exiting = false
+
+vim.api.nvim_create_autocmd("VimLeavePre", {
+    group = snacks_dashboard_group,
+    callback = function()
+        is_exiting = true
+    end,
+})
+
+local function is_real_buffer(buf)
+    if not vim.api.nvim_buf_is_valid(buf) or not vim.bo[buf].buflisted then
+        return false
+    end
+
+    local buftype = vim.bo[buf].buftype
+    local filetype = vim.bo[buf].filetype
+    local name = vim.api.nvim_buf_get_name(buf)
+
+    if buftype ~= "" or filetype == "snacks_dashboard" then
+        return false
+    end
+
+    return name ~= "" or vim.bo[buf].modified
+end
+
+vim.api.nvim_create_autocmd({ "BufDelete", "BufWipeout" }, {
+    group = snacks_dashboard_group,
+    callback = function()
+        vim.defer_fn(function()
+            if is_exiting then
+                return
+            end
+
+            for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+                if is_real_buffer(buf) then
+                    return
+                end
+            end
+
+            if vim.bo.filetype ~= "snacks_dashboard" then
+                Snacks.dashboard.open({
+                    win = vim.api.nvim_get_current_win(),
+                    buf = vim.api.nvim_get_current_buf(),
+                })
+            end
+        end, 20)
+    end,
+})
