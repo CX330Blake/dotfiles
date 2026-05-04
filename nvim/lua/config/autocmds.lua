@@ -25,6 +25,10 @@ vim.api.nvim_create_autocmd("FileType", {
 
 local snacks_dashboard_group = vim.api.nvim_create_augroup("open_snacks_dashboard_when_empty", { clear = true })
 local is_exiting = false
+local ignored_filetypes = {
+    lazy = true,
+    snacks_dashboard = true,
+}
 
 vim.api.nvim_create_autocmd("VimLeavePre", {
     group = snacks_dashboard_group,
@@ -42,7 +46,7 @@ local function is_real_buffer(buf)
     local filetype = vim.bo[buf].filetype
     local name = vim.api.nvim_buf_get_name(buf)
 
-    if buftype ~= "" or filetype == "snacks_dashboard" then
+    if buftype ~= "" or ignored_filetypes[filetype] then
         return false
     end
 
@@ -51,7 +55,11 @@ end
 
 vim.api.nvim_create_autocmd({ "BufDelete", "BufWipeout" }, {
     group = snacks_dashboard_group,
-    callback = function()
+    callback = function(event)
+        if not is_real_buffer(event.buf) then
+            return
+        end
+
         vim.defer_fn(function()
             if is_exiting then
                 return
@@ -63,12 +71,18 @@ vim.api.nvim_create_autocmd({ "BufDelete", "BufWipeout" }, {
                 end
             end
 
-            if vim.bo.filetype ~= "snacks_dashboard" then
-                Snacks.dashboard.open({
-                    win = vim.api.nvim_get_current_win(),
-                    buf = vim.api.nvim_get_current_buf(),
-                })
+            local win = vim.api.nvim_get_current_win()
+            local buf = vim.api.nvim_get_current_buf()
+            local win_config = vim.api.nvim_win_get_config(win)
+
+            if win_config.relative ~= "" or vim.bo[buf].buftype ~= "" or ignored_filetypes[vim.bo[buf].filetype] then
+                return
             end
+
+            Snacks.dashboard.open({
+                win = win,
+                buf = buf,
+            })
         end, 20)
     end,
 })
