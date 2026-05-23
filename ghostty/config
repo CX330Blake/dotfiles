@@ -35,10 +35,10 @@ window-padding-y = 10
 
 
 # Shaders
-# custom-shader-animation = true
+# custom-shader-animation = false
 # custom-shader = "shaders/tesla_coil.glsl"
 # custom-shader = "shaders/glow.glsl"
-custom-shader = "shaders/cursor_warp.glsl"
+# custom-shader = "shaders/cursor_warp.glsl" # uncomment this
 # custom-shader = "shaders/cursor_blaze.glsl"
 
 # Keybindings

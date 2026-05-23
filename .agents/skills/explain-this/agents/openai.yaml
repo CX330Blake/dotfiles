@@ -1,0 +1,4 @@
+interface:
+  display_name: "Explain This"
+  short_description: "Explain concepts with What-Why-How"
+  default_prompt: "Use $explain-this to explain a concept with the What-Why-How framework."

@@ -8,7 +8,7 @@ theme = "rose-pine"
 speed = 30
 
 # Show background colors (set to false for transparent background)
-background = true
+background = false
 
 # Commit playback order: random, asc, or desc
 order = "random"

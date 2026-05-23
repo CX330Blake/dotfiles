@@ -1,0 +1,45 @@
+# ~/.config/gitlogue/themes/rose_pine_dawn.toml
+
+name = "rose-pine-dawn"
+description = "Rosé Pine Dawn inspired theme for Gitlogue"
+author = "CX330Blake"
+variant = "light"
+
+[background]
+left = { r = 250, g = 244, b = 237 }
+right = { r = 255, g = 250, b = 243 }
+
+[editor]
+line_number = { r = 152, g = 147, b = 165 }
+line_number_cursor = { r = 86, g = 148, b = 159 }
+cursor_char_bg = { r = 215, g = 130, b = 126 }
+cursor_char_fg = { r = 255, g = 250, b = 243 }
+separator = { r = 152, g = 147, b = 165 }
+
+[file_tree]
+added = { r = 86, g = 148, b = 159 }
+deleted = { r = 180, g = 99, b = 122 }
+modified = { r = 234, g = 157, b = 52 }
+renamed = { r = 144, g = 122, b = 169 }
+
+[terminal]
+command_input = { r = 87, g = 82, b = 121 }
+command_output = { r = 152, g = 147, b = 165 }
+cursor = { r = 215, g = 130, b = 126 }
+
+[status_bar]
+hash = { r = 234, g = 157, b = 52 }
+author = { r = 86, g = 148, b = 159 }
+date = { r = 144, g = 122, b = 169 }
+message = { r = 87, g = 82, b = 121 }
+
+[syntax]
+keyword = { r = 144, g = 122, b = 169 }
+type = { r = 234, g = 157, b = 52 }
+function = { r = 86, g = 148, b = 159 }
+string = { r = 234, g = 157, b = 52 }
+number = { r = 215, g = 130, b = 126 }
+comment = { r = 152, g = 147, b = 165 }
+operator = { r = 180, g = 99, b = 122 }
+variable = { r = 87, g = 82, b = 121 }
+constant = { r = 215, g = 130, b = 126 }

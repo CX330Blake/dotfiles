@@ -8,4 +8,5 @@ return {
     { "nvim-neo-tree/neo-tree.nvim", enabled = false },
     { "zaldih/themery.nvim", enabled = false },
     { "andweeb/presence.nvim", enabled = false },
+    { "zbirenbaum/copilot.lua", enabled = false },
 }
