@@ -274,9 +274,6 @@ export EDITOR=nvim
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-##### Volatility #####
-alias vol="python2 ~/Applications/volatility/vol.py"
-
 ##### Java #####
 if [ -x /usr/libexec/java_home ]; then
   export JAVA_HOME=$(/usr/libexec/java_home)
@@ -421,7 +418,15 @@ backup() {
     cp -a -- "$target" "$target.bak"
   done
 }
+
 eval "$(zoxide init zsh)"
+alias cd="z"
 
 ##### Obsidian #####
 alias ovim="nvim ~/Obsidian/HackingPlaybook/"
+
+##### Yazi #####
+alias yz=yazi
+
+##### concord #####
+alias discord=concord
