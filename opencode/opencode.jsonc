@@ -4,6 +4,7 @@
       "opencode-openai-codex-auth",
       "file:///Users/CX330/.config/opencode/plugins/codeisland.js"
     ],
+    "lsp": {},
     "$schema": "https://opencode.ai/config.json",
     "permission": {
         "skill": {
