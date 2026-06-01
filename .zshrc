@@ -430,3 +430,9 @@ alias yz=yazi
 
 ##### concord #####
 alias discord=concord
+
+# Mole shell completion
+if output="$(mole completion zsh 2>/dev/null)"; then eval "$output"; fi
+
+##### Direnv #####
+eval "$(direnv hook zsh)"
