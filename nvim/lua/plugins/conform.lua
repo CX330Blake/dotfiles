@@ -8,7 +8,11 @@ return {
         },
         formatters_by_ft = {
             lua = { "stylua" },
-            python = { "isort", "black" },
+            python = {
+                "ruff_fix",
+                "ruff_organize_imports",
+                "ruff_format",
+            },
             rust = { "rustfmt", lsp_format = "fallback" },
             javascript = { "prettierd", "prettier", stop_after_first = true },
         },
