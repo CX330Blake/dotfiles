@@ -225,7 +225,7 @@ return {
         "LazyVim/LazyVim",
         opts = function()
             return {
-                colorscheme = "rose-pine",
+                colorscheme = "tokyonight",
             }
         end,
     },

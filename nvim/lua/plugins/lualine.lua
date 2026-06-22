@@ -32,7 +32,7 @@ return {
                         {
                             "mode",
                             fmt = function(str)
-                                return "🧛 " .. str -- 在前面加固定 icon
+                                return "󰭟 " .. str -- 在前面加固定 icon -- bat icon
                             end,
                         },
                     },

@@ -344,20 +344,6 @@ alias oc=opencode
 # Added by Antigravity
 export PATH="/Users/CX330/.antigravity/antigravity/bin:$PATH"
 
-# Neovim
-update_nvim_theme() {
-  if defaults read -g AppleInterfaceStyle &>/dev/null; then
-    export NVIM_THEME=dark
-  else
-    export NVIM_THEME=light
-  fi
-}
-
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd update_nvim_theme   # 每次要顯示 prompt 前都更新一次
-update_nvim_theme                       # 進 shell 先跑一次
-
-
 ##### Spotify Player #####
 alias spotify=spotify_player
 
@@ -435,7 +421,29 @@ alias yz=yazi
 alias discord=concord
 
 # Mole shell completion
-if output="$(mole completion zsh 2>/dev/null)"; then eval "$output"; fi
+_mole_completion_cache="${XDG_CACHE_HOME:-$HOME/.cache}/mole-completion.zsh"
+if [[ ! -r "$_mole_completion_cache" ]] || [[ "$(command -v mole)" -nt "$_mole_completion_cache" ]]; then
+  mole completion zsh >| "$_mole_completion_cache" 2>/dev/null
+fi
+source "$_mole_completion_cache"
+unset _mole_completion_cache
 
 ##### Direnv #####
 eval "$(direnv hook zsh)"
+
+##### Remote nvim server #####
+alias nvims="nvim --headless --listen 0.0.0.0:6666"
+
+nvimc() {
+  if [ -z "$1" ]; then
+    echo "Usage: nvimc <hostname> [port]"
+    echo "Example: nvimc kali"
+    echo "Example: nvimc fedora 6666"
+    return 1
+  fi
+
+  local host="$1"
+  local port="${2:-6666}"
+
+  nvim --server "${host}:${port}" --remote-ui
+}

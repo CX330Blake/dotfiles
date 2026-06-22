@@ -5,7 +5,8 @@
 # background-opacity = 0.7
 # background-blur-radius = 20
 # theme = "TokyoNight Moon"
-theme = light: "Rose Pine Dawn", dark: "Rose Pine Moon"
+# theme = light: "Rose Pine Dawn", dark: "Rose Pine Moon"
+theme = light: "TokyoNight Day", dark: "TokyoNight Moon"
 bold-is-bright = true
 # background = #1e1f29
 # foreground = #e6e6e6

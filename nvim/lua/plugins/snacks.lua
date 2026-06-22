@@ -25,6 +25,11 @@ return {
             indent = { enabled = false },
             notifier = { enabled = false },
             picker = {
+                sources = {
+                    files = {
+                        git_status = false,
+                    },
+                },
                 layout = {
                     preset = "telescope",
                 },

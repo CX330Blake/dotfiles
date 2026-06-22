@@ -40,6 +40,7 @@
     {
       "host": "kali",
       "username": "cx330",
+      "args": [],
       "projects": [
         {
           "paths": [
@@ -63,6 +64,11 @@
         },
         {
           "paths": [
+            "/home/cx330/Working/Share/NCKU-Compiler/HW2"
+          ]
+        },
+        {
+          "paths": [
             "~/Working"
           ]
         }
@@ -72,6 +78,7 @@
     {
       "host": "10.1.1.18",
       "username": "cx330",
+      "args": [],
       "projects": [
         {
           "paths": [
@@ -101,7 +108,7 @@
   "theme": {
     "mode": "system",
     "light": "Rosé Pine Dawn",
-    "dark": "Rosé Pine"
+    "dark": "Tokyo Night Moon"
   },
   "formatter": "language_server",
   "format_on_save": "on",
