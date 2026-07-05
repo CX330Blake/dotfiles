@@ -22,9 +22,7 @@ return {
                     style = "icon",
                 },
                 -- stylua: ignore
-                right_mouse_command = function(n)
-                    Snacks.bufdelete(n)
-                end,
+                right_mouse_command = function(n) Snacks.bufdelete(n) end,
                 diagnostics = "nvim_lsp",
                 always_show_bufferline = false,
                 diagnostics_indicator = function(_, _, diag)
@@ -35,12 +33,13 @@ return {
                 end,
                 offsets = {
                     {
-                        filetype = "snacks_layout_box",
-                        separator = false,
+                        filetype = "neo-tree",
+                        text = "Neo-tree",
+                        highlight = "Directory",
+                        text_align = "left",
                     },
                     {
-                        filetype = "snacks_picker_list",
-                        separator = false,
+                        filetype = "snacks_layout_box",
                     },
                 },
                 ---@param opts bufferline.IconFetcherOpts
