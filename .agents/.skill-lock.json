@@ -2110,6 +2110,105 @@
       "skillFolderHash": "a9977180416ecf1e4ffc7c2c4c7a17f2ec89ed40",
       "installedAt": "2026-04-11T17:14:04.448Z",
       "updatedAt": "2026-04-11T17:14:04.448Z"
+    },
+    "ctf-ai-ml": {
+      "source": "ljagiello/ctf-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ljagiello/ctf-skills.git",
+      "skillPath": "ctf-ai-ml/SKILL.md",
+      "skillFolderHash": "2fe15ba39775e7250c6e2c05d151af4505ad2ffc",
+      "installedAt": "2026-07-05T11:21:56.347Z",
+      "updatedAt": "2026-07-05T11:21:56.347Z"
+    },
+    "ctf-crypto": {
+      "source": "ljagiello/ctf-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ljagiello/ctf-skills.git",
+      "skillPath": "ctf-crypto/SKILL.md",
+      "skillFolderHash": "4bda63c865eaf4a7872cce86797a666d0a7814d1",
+      "installedAt": "2026-07-05T11:21:56.350Z",
+      "updatedAt": "2026-07-05T11:21:56.350Z"
+    },
+    "ctf-forensics": {
+      "source": "ljagiello/ctf-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ljagiello/ctf-skills.git",
+      "skillPath": "ctf-forensics/SKILL.md",
+      "skillFolderHash": "e3094e3998f4b1af2e9de2e793270bd94651d7ff",
+      "installedAt": "2026-07-05T11:21:56.352Z",
+      "updatedAt": "2026-07-05T11:21:56.352Z"
+    },
+    "ctf-malware": {
+      "source": "ljagiello/ctf-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ljagiello/ctf-skills.git",
+      "skillPath": "ctf-malware/SKILL.md",
+      "skillFolderHash": "5660be6820fce51c82772be88a0be0769b56e1e2",
+      "installedAt": "2026-07-05T11:21:56.354Z",
+      "updatedAt": "2026-07-05T11:21:56.354Z"
+    },
+    "ctf-misc": {
+      "source": "ljagiello/ctf-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ljagiello/ctf-skills.git",
+      "skillPath": "ctf-misc/SKILL.md",
+      "skillFolderHash": "30a832db8ac05291885a9ac1d90930a40ed0cbdf",
+      "installedAt": "2026-07-05T11:21:56.356Z",
+      "updatedAt": "2026-07-05T11:21:56.356Z"
+    },
+    "ctf-osint": {
+      "source": "ljagiello/ctf-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ljagiello/ctf-skills.git",
+      "skillPath": "ctf-osint/SKILL.md",
+      "skillFolderHash": "92deca002e957a084f7d7f7f79230e374b22d8a3",
+      "installedAt": "2026-07-05T11:21:56.358Z",
+      "updatedAt": "2026-07-05T11:21:56.358Z"
+    },
+    "ctf-pwn": {
+      "source": "ljagiello/ctf-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ljagiello/ctf-skills.git",
+      "skillPath": "ctf-pwn/SKILL.md",
+      "skillFolderHash": "b66094f806c9a00161718cb4933b121861620fa8",
+      "installedAt": "2026-07-05T11:21:56.360Z",
+      "updatedAt": "2026-07-05T11:21:56.360Z"
+    },
+    "ctf-reverse": {
+      "source": "ljagiello/ctf-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ljagiello/ctf-skills.git",
+      "skillPath": "ctf-reverse/SKILL.md",
+      "skillFolderHash": "51c9f087c0bef9a6dcbaf4176172317dc223b236",
+      "installedAt": "2026-07-05T11:21:56.363Z",
+      "updatedAt": "2026-07-05T11:21:56.363Z"
+    },
+    "ctf-web": {
+      "source": "ljagiello/ctf-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ljagiello/ctf-skills.git",
+      "skillPath": "ctf-web/SKILL.md",
+      "skillFolderHash": "db7affdfa0f8523188a938b48ca639fe4aae8f04",
+      "installedAt": "2026-07-05T11:21:56.365Z",
+      "updatedAt": "2026-07-05T11:21:56.365Z"
+    },
+    "ctf-writeup": {
+      "source": "ljagiello/ctf-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ljagiello/ctf-skills.git",
+      "skillPath": "ctf-writeup/SKILL.md",
+      "skillFolderHash": "0cdda36411880f5ebf0ab942c8241af9cfb68d89",
+      "installedAt": "2026-07-05T11:21:56.367Z",
+      "updatedAt": "2026-07-05T11:21:56.367Z"
+    },
+    "solve-challenge": {
+      "source": "ljagiello/ctf-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ljagiello/ctf-skills.git",
+      "skillPath": "solve-challenge/SKILL.md",
+      "skillFolderHash": "1f9a51abfdb29bbd36110539f5af8ffd9c73df19",
+      "installedAt": "2026-07-05T11:21:56.378Z",
+      "updatedAt": "2026-07-05T11:21:56.378Z"
     }
   },
   "dismissed": {
@@ -2118,15 +2217,16 @@
   "lastSelectedAgents": [
     "amp",
     "antigravity",
+    "antigravity-cli",
     "cline",
     "codex",
     "cursor",
     "deepagents",
-    "firebender",
     "gemini-cli",
     "github-copilot",
-    "kimi-cli",
+    "kimi-code-cli",
     "opencode",
-    "warp"
+    "warp",
+    "zed"
   ]
 }
