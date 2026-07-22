@@ -10,8 +10,8 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 -- Disable mouse
-vim.keymap.set("", "<up>", "<nop>", { noremap = true })
-vim.keymap.set("", "<down>", "<nop>", { noremap = true })
-vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
-vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
-vim.opt.mouse = ""
+-- vim.keymap.set("", "<up>", "<nop>", { noremap = true })
+-- vim.keymap.set("", "<down>", "<nop>", { noremap = true })
+-- vim.keymap.set("i", "<up>", "<nop>", { noremap = true })
+-- vim.keymap.set("i", "<down>", "<nop>", { noremap = true })
+-- vim.opt.mouse = ""

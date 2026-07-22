@@ -2,11 +2,12 @@
 # https://ghostty.zerebos.com/
 
 # title = Ghostty 👻
-# background-opacity = 0.7
-# background-blur-radius = 20
+background-opacity = 0.8
+background-blur-radius = 20
 # theme = "TokyoNight Moon"
 # theme = light: "Rose Pine Dawn", dark: "Rose Pine Moon"
-theme = light: "TokyoNight Day", dark: "TokyoNight Moon"
+# theme = light: "TokyoNight Day", dark: "TokyoNight Moon"
+theme = light: "Flexoki Light", dark: "Flexoki Dark"
 bold-is-bright = true
 # background = #1e1f29
 # foreground = #e6e6e6
@@ -18,12 +19,13 @@ cursor-invert-fg-bg = true
 cursor-style-blink = false
 cursor-style = block
 shell-integration = none
+# font-size = 12
 font-size = 14
 # font-family = "FiraCode Nerd Font"
 # font-family = "Zed Mono"
 font-family = "Maple Mono NF Regular"
-font-codepoint-map = U+4E00-U+9FFF = LXGW WenKai Mono
-font-codepoint-map = U+3400-U+4DBF = LXGW WenKai Mono
+font-codepoint-map = U+4E00-U+9FFF = LXGW WenKai Mono TC
+font-codepoint-map = U+3400-U+4DBF = LXGW WenKai Mono TC
 adjust-cell-height = 15% 
 font-style = Regular
 font-style-bold = Bold
@@ -33,6 +35,7 @@ clipboard-write = allow
 macos-titlebar-style = tabs
 window-padding-x = 10
 window-padding-y = 10
+macos-icon = glass
 
 
 # Shaders

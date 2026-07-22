@@ -1,4 +1,6 @@
 return {
+    -- Flexoki by Kepano
+    { "kepano/flexoki-neovim", name = "flexoki" },
     -- Kanagawa
     {
         "rebelot/kanagawa.nvim",
@@ -62,7 +64,7 @@ return {
         lazy = false,
         priority = 1000,
         opts = {
-            transparent = false,
+            transparent = true,
             styles = {
                 sidebars = "transparent",
                 floats = "transparent",

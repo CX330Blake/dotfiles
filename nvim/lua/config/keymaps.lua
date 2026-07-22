@@ -12,3 +12,8 @@ local map = vim.keymap.set
 
 map("i", "jk", "<Esc>", { noremap = true, silent = true })
 map("n", "<leader>zz", ":ZenMode<CR>", { noremap = true, silent = true })
+
+-- Snacks.picker
+vim.keymap.set("n", "<leader><space>", LazyVim.pick("files", { root = false }), {
+    desc = "Find Files (cwd)",
+})

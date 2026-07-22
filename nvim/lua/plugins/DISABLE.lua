@@ -9,6 +9,7 @@ return {
     { "zaldih/themery.nvim", enabled = false },
     { "andweeb/presence.nvim", enabled = false },
     { "zbirenbaum/copilot.lua", enabled = false },
-    { "folke/sidekick.nvim", enabled = false },
+    -- { "folke/sidekick.nvim", enabled = false },
     { "typicode/bg.nvim", enabled = false },
+    { "olimorris/codecompanion.nvim", enabled = false },
 }
