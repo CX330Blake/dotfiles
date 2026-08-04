@@ -1,6 +1,8 @@
 # Production (Build · Verify · Troubleshoot)
 
-The engineering runbook for kami: from HTML / Python templates to PDF / PPTX deliverables. Four parts: **HTML -> PDF** · **Python -> PPTX** · **Verify & Debug** · **16 known pitfalls**.
+The engineering runbook for kami: from HTML / Python / Markdown sources to PDF,
+PPTX, browser-deck, and DOCX deliverables. It covers each supported render path,
+verification and debugging, and the known pitfalls gathered from production use.
 
 ---
 
@@ -68,7 +70,7 @@ font-family: "Source Han Serif K", "Source Han Serif KR",
              Charter, Georgia, serif;
 ```
 
-**Font fallback affects page count**. Any font swap requires re-running the page-count check. If it overflows: lower `font-size` first, then tighten margins, then cut content.
+**Font fallback affects page count**. Any font swap requires re-running the page-count check. If output overflows, first confirm the intended font actually loaded. If it did, edit content using pitfall "Hard-limit overflow"; spacing comes later and font size is the last resort.
 
 **Claude Desktop skill ZIPs do not bundle large CJK font files**: `TsangerJinKai02-W04.ttf`, `TsangerJinKai02-W05.ttf`, `SourceHanSerifKR-Regular.otf`, and `SourceHanSerifKR-Medium.otf` can make Claude.ai / Desktop skill upload or execution time out. The ZIP you upload must be the `scripts/package-skill.sh` output under the 6MB package ceiling, never a hand-zipped checkout. `package-skill.sh` excludes those large font files. Templates still keep local-first and jsDelivr fallback `@font-face` paths.
 
@@ -222,7 +224,7 @@ pip install python-pptx --break-system-packages --quiet
 - **4:3 traditional**: 10 × 7.5 inch
 - **Safe zone**: 0.5 inch margin on all sides (projector crop), plus 0.3 inch at bottom for page number
 
-### Palette (1:1 with design.md)
+### Palette (mirrors `assets/templates/slides.py`)
 
 ```python
 from pptx.dml.color import RGBColor
@@ -232,11 +234,12 @@ IVORY       = RGBColor(0xfa, 0xf9, 0xf5)
 BRAND       = RGBColor(0x1B, 0x36, 0x5D)
 NEAR_BLACK  = RGBColor(0x14, 0x14, 0x13)
 DARK_WARM   = RGBColor(0x3d, 0x3d, 0x3a)
-OLIVE       = RGBColor(0x5e, 0x5d, 0x59)
-STONE       = RGBColor(0x87, 0x86, 0x7f)
-BORDER_WARM = RGBColor(0xe8, 0xe6, 0xdc)
-TAG_BG      = RGBColor(0xee, 0xf2, 0xf7)
+OLIVE       = RGBColor(0x50, 0x4e, 0x49)
+STONE       = RGBColor(0x6b, 0x6a, 0x64)
+BORDER      = RGBColor(0xe8, 0xe6, 0xdc)
 ```
+
+The PPTX path defines no tag constant; tag styling is print- and screen-only. `references/tokens.json` is the source of truth for the values; `scripts/tokens.py` pins the ones in its `PY_TOKEN_MAP` (`BORDER` is not among them, so change it in `slides.py` and here together).
 
 ### Type (bigger than print, optimized for projection)
 
@@ -303,10 +306,18 @@ def blank_slide():
 
 1. **One idea per slide** - if it runs over three lines, split it
 2. **No default PowerPoint template** - it's cool-blue-gray, clashes with parchment
-3. **Animations**: don't. Parchment is a print aesthetic, not a SaaS demo. At most `fade`
+3. **Animations**: none by default. When motion carries meaning, use `fade` only
 4. **Export to PDF** for sharing - cross-machine consistency is better than .pptx
  - macOS: Keynote -> Export to PDF
  - Linux: `libreoffice --headless --convert-to pdf output.pptx`
+
+### PPTX delivery check
+
+A generated PPTX is complete only after it has been opened in presentation software
+or exported to PDF and inspected. Pass when the intended Kami font family remains
+present, with no silent substitution to Calibri, Aptos, or another presentation
+default; no text overflows or crops; all content stays inside the safe zone; and page
+numbers remain intact. A successful `python-pptx` save is not delivery evidence.
 
 ### Slide scale rules (from production decks)
 
@@ -419,8 +430,15 @@ pdftoppm -png -r 300 out.pdf inspect
 ### Did the font actually load?
 
 ```bash
-pdffonts output.pdf
+python3 scripts/build.py --check-fonts output.pdf   # verdict, from the PDF's span table
+pdffonts output.pdf                                 # raw font table, if you want to look yourself
 ```
+
+`--check-fonts` reads which family drew the body ideographs and fails on two
+states `pdffonts` will not tell you apart: a sans substitution (the page reads
+fine and looks cheap), and CJK text split across two families (per-glyph
+fontconfig fallback, which breaks single words down the middle). Prefer it over
+reading the font table by eye, and never sign off a CJK deliverable without it.
 
 If the output shows `DejaVuSerif` / `Bitstream Vera` - your specified font didn't load, fell through to system ultimate fallback. Expected: `Charter`, `Georgia`, `TsangerJinKai02`, or a Japanese Mincho face such as `YuMincho`, `Hiragino-Mincho`, `Noto-Serif-CJK-JP`, or `Source-Han-Serif-JP`.
 
@@ -429,11 +447,13 @@ If the output shows `DejaVuSerif` / `Bitstream Vera` - your specified font didn'
 Project script `scripts/build.py` is the productized version of the three-step loop:
 
 ```bash
-python3 scripts/build.py               # all 12 examples
+python3 scripts/build.py               # all registered examples
 python3 scripts/build.py resume-en     # one target + page count + fonts
 python3 scripts/build.py --check       # scan for CSS rule violations
 python3 scripts/build.py --check-density       # warn on pages with >25% trailing whitespace
 python3 scripts/build.py --check-markdown output.pdf  # scan for raw Markdown markers
+python3 scripts/build.py --check-content content.json filled.html  # content IR schema + coverage
+python3 scripts/build.py --check-visual output.pdf    # page PNGs + perceptual review checklist
 ```
 
 For long-doc templates, keep TOC entries as links to stable chapter ids. The page
@@ -442,7 +462,9 @@ do not require hand-updating page numbers.
 
 ### Page overflow (constrained templates)
 
-When a constrained template (one-pager, letter, resume, and their variants) runs over its page ceiling, fix it by editing content, not by shrinking type: cut or merge body copy until it fits, since tiny font / line-height / margin changes break the layout (see High-Risk Pitfalls). Then verify:
+When a constrained template exceeds its page ceiling, treat content as the primary
+repair surface; use Part 4 pitfall "Hard-limit overflow" for the proven priority
+order. The result must pass both checks:
 
 ```bash
 python3 scripts/build.py --check
@@ -490,7 +512,7 @@ If the site has only one or two locales, hand-maintained static pages are accept
 
 ---
 
-## Part 4 · 22 known pitfalls
+## Part 4 · Known pitfalls
 
 Every entry below came from a real failure. Check here first when something looks wrong.
 
@@ -505,29 +527,13 @@ Severity scale: **(P0)** render-breaking, must fix before delivery. **(P1)** bre
 **Fix**: Tag backgrounds must be solid hex. No rgba.
 
 ```css
-/* avoid */ .tag { background: rgba(201, 100, 66, 0.18); }
-/* use   */ .tag { background: #E4ECF5; }
+/* avoid */ .tag { background: rgba(27, 54, 93, 0.18); }
+/* use   */ .tag { background: var(--tag-bg); }
 ```
 
-**rgba -> solid conversion** (parchment `#f5f4ed` base + ink-blue `#1B365D`):
+Kami ships two registered tints for this, `--tag-bg` and `--brand-tint`; `references/design.md` «Tags» owns which one to pick. A tint outside those two needs a `tokens.json` entry first, or `scripts/tokens.py` fails the sync guard.
 
-| rgba alpha | Solid hex |
-|---|---|
-| 0.08 | `#EEF2F7` |
-| 0.14 | `#E4ECF5` |
-| **0.18** | **`#E4ECF5`** ← default |
-| 0.22 | `#D0DCE9` |
-| 0.30 | `#D6E1EE` |
-
-Formula: `solid_channel = base + (foreground - base) × alpha`. Different base colors (e.g. ivory) need re-computing.
-
-**Want "breathing" texture?** Use `linear-gradient` - the whole tag rasterizes as one bitmap, no alpha compositing:
-
-```css
-.tag { background: linear-gradient(to right, #D6E1EE, #E4ECF5 70%, #EEF2F7); }
-```
-
-**Aesthetic warning**: gradients work engineering-wise but usually oversell the tag. Priority order: lightest solid (`#EEF2F7`) > standard solid (`#E4ECF5`) > gradient (rarely). If the reader's eye lands on the tag background shape before the text inside - you went too far.
+If you genuinely need a texture, `linear-gradient` is safe engineering-wise (the tag rasterizes as one bitmap, no alpha compositing), but at tag size it oversells every time. Solid is the answer.
 
 ### 2. (P0) Thin border + radius = double circle
 
@@ -596,13 +602,38 @@ apt install fonts-noto-cjk
 mkdir -p ~/.fonts && cp *.ttf ~/.fonts/ && fc-cache -f
 ```
 
+### 4.1 (P1) Latin-first font stack splits CJK inside inline SVG
+
+**Symptom**: labels inside an embedded SVG render in two typefaces at once,
+often mid-word (`提交` in one face, `请` in another). The stack names a CJK
+family, and a rendered PDF still shows two.
+
+**Root cause**: for SVG text, a leading Latin serif (`Charter, Georgia, ...`)
+ends the CSS stack walk. Characters it has no glyph for go to fontconfig
+per glyph rather than continuing down the declared list, so the CJK families
+written after it never get their turn and each ideograph lands wherever
+fontconfig prefers (`Hiragino-Mincho` for some, `Songti-SC` for others).
+
+**Fix**: in SVG `text` rules, put the CJK families first and let Latin faces
+trail. `@font-face` fonts do resolve inside inline SVG, so `TsangerJinKai02`
+leading the stack draws both scripts from one family:
+
+```css
+/* wrong: CJK after Latin, splits per glyph */
+text { font-family: Charter, Georgia, "TsangerJinKai02", "Songti SC", serif; }
+/* right: one family draws the whole label */
+text { font-family: "TsangerJinKai02", "Source Han Serif SC", "Songti SC", Charter, Georgia, serif; }
+```
+
+`--check-fonts` catches this state; a page render at normal size usually does not.
+
 ### 5. (P2) CJK and Latin crowding (Chinese mode only)
 
 **Symptom**: "125.4k GitHub Stars" - k and G feel glued.
 
 **Wrong fixes**: hand-added `&nbsp;` / `margin-left: 2mm` (misaligns adjacent elements).
 
-**Right fix**: separate spans with flex gap:
+**Right fix**: separate spans and let flex `gap` carry the space, never a hand-added `&nbsp;` or margin:
 
 ```html
 <div class="metric">
@@ -611,8 +642,10 @@ mkdir -p ~/.fonts && cp *.ttf ~/.fonts/ && fc-cache -f
 </div>
 ```
 ```css
-.metric { display: flex; align-items: baseline; gap: 6pt; }
+.metric { display: flex; gap: 6pt; }   /* direction: see pitfall #20 */
 ```
+
+The `gap` is the fix here. Whether the pair sits inline or stacks is a separate call, and pitfall #20 owns it.
 
 ### 6. (P2) Full-width vs half-width spaces (Chinese mode)
 
@@ -622,26 +655,20 @@ mkdir -p ~/.fonts && cp *.ttf ~/.fonts/ && fc-cache -f
 
 ### 7. (P2) Thousands / percent / arrows - be consistent
 
-| Use | Avoid |
-|---|---|
-| `5,000+` | `5000+` |
-| `90%` | `90 %` (pre-space) |
-| `->` | `->` / `-&gt;` |
+**Symptom**: one document mixes thousands separators, spaced percent signs, or
+multiple arrow glyphs. `writing.md` "Number formatting" is the source of truth.
 
 Self-check:
 ```bash
-grep -oE '->|->|⟶|⇒' doc.html | sort | uniq -c
+grep -oE '→|⟶|⇒' doc.html | sort | uniq -c
 grep -oE '[0-9]{4,}' doc.html | sort -u
 ```
 
 ### 8. (P2) Too much / too little emphasis
 
-- Four or five ink-blue runs in one line -> visual fatigue, no focal point
-- Entire section with none -> flat, no scan handles
-
-**Rule**: ≤ 2 emphases per line, ≥ 1 per section, only **quantifiable numbers or distinctive phrases** get highlighted - never adjectives.
-
-Healthy ratio: one emphasis per 80-150 words.
+**Symptom**: four or five ink-blue runs in one line create visual fatigue, while a
+long prose section with none has no scan handle. `writing.md` "Emphasis rhythm" is
+the source of truth for density and eligible content.
 
 ### 9. (P0) `height: 100vh` doesn't work
 
@@ -709,17 +736,7 @@ Healthy ratio: one emphasis per 80-150 words.
 
 **Fix**: source images at 2x or 3x.
 
-### 14. (P3) Verification loop (catch-all)
-
-```bash
-python3 -c "from weasyprint import HTML; HTML('doc.html').write_pdf('out.pdf')"
-python3 -c "from pypdf import PdfReader; print(len(PdfReader('out.pdf').pages))"
-pdftoppm -png -r 300 out.pdf inspect    # when in doubt
-```
-
-**Not verified = not done.**
-
-### 15. (P0) SVG marker `orient="auto"` ignored
+### 14. (P0) SVG marker `orient="auto"` ignored
 
 **Symptom**: SVG arrows using `<marker orient="auto">` or `orient="auto-start-reverse"` all point right (the marker's default drawing direction), regardless of the path's tangent angle.
 
@@ -751,7 +768,7 @@ Chevron templates (tip at endpoint, 8px arm length):
 | up | `M (x-8) (y+8) L x y L (x+8) (y+8)` |
 | right | `M (x-8) (y-8) L x y L (x-8) (y+8)` |
 
-### 16. (P1) Slide letter-spacing must be halved
+### 15. (P1) Slide letter-spacing must be halved
 
 **Symptom**: Slide text looks "scattered" or over-spaced when print letter-spacing values (e.g. `letter-spacing: 8px`) are used directly.
 
@@ -767,7 +784,7 @@ Chevron templates (tip at endpoint, 8px arm length):
 .slide .eyebrow { letter-spacing: 3px; }   /* halved */
 ```
 
-### 17. (P1) Figure SVG `max-height` starves width
+### 16. (P1) Figure SVG `max-height` starves width
 
 **Symptom**: An inline `<svg>` inside `<figure>` sits at less than the page content width, leaving a visible parchment gap on the right while the surrounding title and table run full-width.
 
@@ -785,7 +802,7 @@ figure svg { width: 100%; height: auto; max-height: 70mm; }
 
 Quick check: if `viewBox` aspect ratio × current `max-height` < page content width, the chart is starved. Bump `max-height` until `aspect × max-height >= content width` or remove the cap.
 
-### 18. (P1) Multi-column metric labels need word-budget discipline
+### 17. (P1) Multi-column metric labels need word-budget discipline
 
 **Symptom**: One or more labels in a 3-4 column metric row wrap to two lines while siblings stay on one line, breaking the baseline rhythm and pushing the value/label out of alignment.
 
@@ -801,7 +818,7 @@ Quick check: if `viewBox` aspect ratio × current `max-height` < page content wi
 
 When the natural label is longer (e.g. "Falcon launches, lifetime"), trim to the data essential ("Falcon launches"); supporting context belongs in nearby body copy, not in a metric chip.
 
-### 19. (P2) Multi-column body density imbalance
+### 18. (P2) Multi-column body density imbalance
 
 **Symptom**: A row of N parallel body columns (timeline cards, conviction cards, feature blurbs) renders with one column wrapping to one extra line while the others wrap evenly. The rhythm reads broken even when each individual cell looks fine.
 
@@ -816,7 +833,7 @@ col 3:  88 chars (3 lines)   <- breaks rhythm
 col 3': 66 chars (2 lines)   <- fixed by trimming "general intelligence" -> "AGI"
 ```
 
-### 20. (P0) Demo / template HTML must reference assets inside the kami repo
+### 19. (P0) Demo / template HTML must reference assets inside the kami repo
 
 **Symptom**: Image slot renders as a missing-image placeholder in the PDF; rendered demo PNG looks empty where a screenshot should be.
 
@@ -834,7 +851,7 @@ col 3': 66 chars (2 lines)   <- fixed by trimming "general intelligence" -> "AGI
 
 Quick check before building any demo: `rg 'src="(\.\./|/Users/|file://)' assets/demos/` should return zero matches.
 
-### 21. (P1) Metric row baseline-align breaks when labels wrap
+### 20. (P1) Metric row baseline-align breaks when labels wrap
 
 **Symptom**: A horizontal metric row with `display: flex; align-items: baseline` looks fine when every label is one line, but ugly when one label wraps. The big number "10×" sits at the visual top of its column while the multi-line label flows downward; sibling columns with one-line labels look balanced but the wrapped column reads broken.
 
@@ -843,16 +860,16 @@ Quick check before building any demo: `rg 'src="(\.\./|/Users/|file://)' assets/
 **Fix**: Stack vertically (`flex-direction: column`). All numbers sit on the same top edge, all labels start at the same y below the numbers, and label wrap only extends each column's bottom, which is invisible on a slide / page.
 
 ```css
-/* avoid: breaks visually when one label wraps */
-.metric { display: flex; align-items: baseline; gap: 8pt; }
+/* inline: only when every label in the row is short and single-line */
+.metric { display: flex; align-items: baseline; }
 
-/* use: vertical stack, number above label */
-.metric { display: flex; flex-direction: column; gap: 6pt; }
+/* stack: the default whenever a label can wrap */
+.metric { display: flex; flex-direction: column; }
 ```
 
-This is especially important on slides where metrics often sit on a baseline strip at the bottom of the page; even a single multi-line label among 3 columns breaks the rhythm.
+The shipped templates follow exactly that split: `equity-report*.html` keeps the inline baseline because its labels are fixed short strings, while every `landing-page*.html` stacks, because a screen label is translated, retitled, and read at 375px. On slides, where metrics sit on a baseline strip at the bottom, one multi-line label among three columns is enough to break the rhythm, so stack there too.
 
-### 22. (P2) Slide bullets: prefer short numerals or `•` over en-dash
+### 21. (P2) Slide bullets: prefer short numerals or `•` over en-dash
 
 **Symptom**: A bulleted list on a slide with `–` (en-dash, U+2013) markers reads heavy and informal, especially at large slide font sizes (12-14pt body). The en-dash is wide and creates a visible gap between marker and text.
 
@@ -876,6 +893,30 @@ ul.pts li::before {
 ```
 
 Print docs (long-doc, equity-report) keep the editorial en-dash style; slides switch to numerals.
+
+### 22. (P1) Section body text is narrower than the page
+
+**Symptom**: manifesto, section-lede, or similar body copy renders as a narrow inset
+column while adjacent content fills the page.
+
+**Root cause**: a generic article-style `max-width` was applied to body text. Kami
+section copy should fill the `.page` container; `.type-sample` and
+`.footer .colophon` are the intentional exceptions.
+
+**Fix**: remove the body-copy `max-width` rather than widening it with another local
+override. Keep the two named exceptions constrained.
+
+### 23. (P3) Diagram fixes drift from public-site miniatures
+
+**Symptom**: a diagram template renders correctly, but the public showcase still
+shows the old geometry or styling.
+
+**Root cause**: each public locale page contains a separate inline mini SVG; it is
+not generated from `assets/diagrams/*.html`.
+
+**Done when**: every visual change to a diagram template is also present in the
+matching mini SVG in `index.html`, `index-zh.html`, `index-ja.html`, `index-ko.html`,
+and `index-tw.html`.
 
 ---
 

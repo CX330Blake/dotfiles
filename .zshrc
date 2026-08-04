@@ -447,3 +447,7 @@ nvimc() {
 
   nvim --server "${host}:${port}" --remote-ui
 }
+
+##### Chisel #####
+alias cclient="chisel client kali:8080 1080:socks"
+alias cserver="chisel server --socks5"

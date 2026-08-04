@@ -12,4 +12,5 @@ return {
     -- { "folke/sidekick.nvim", enabled = false },
     { "typicode/bg.nvim", enabled = false },
     { "olimorris/codecompanion.nvim", enabled = false },
+    { "karb94/neoscroll.nvim", enabled = false },
 }

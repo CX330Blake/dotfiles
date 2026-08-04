@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import contextlib
 import builtins
+import hashlib
 import importlib.util
 import inspect
 import io
@@ -31,28 +32,40 @@ from build import (  # noqa: E402
     HTML_TARGETS,
     PPTX_TARGETS,
     SCREEN_TARGETS,
+    main as build_main,
+)
+from checks import (  # noqa: E402
     _BG_B,
     _BG_G,
     _BG_R,
     _density_bucket,
-    _extract_root_vars,
     _last_content_y,
     _markdown_residue_issues,
-    _off_palette_findings,
     _orphan_last_line,
-    _pair_names,
     _parse_slide_sequence,
     _resume_balance_issues,
     _rhythm_issues,
+    check_markdown_residue,
+    check_placeholders,
+    scan_density,
+)
+from lint import (  # noqa: E402
+    NEGATIVE_EXAMPLE_LINE,
+    _blank_block,
+    _documented_snippets,
+    _emphasis_container_findings,
+    _extract_root_vars,
+    _off_palette_findings,
+    _pair_names,
     _root_token_findings,
+    _undefined_token_findings,
     check_all,
     check_cross_template_consistency,
-    check_markdown_residue,
     check_off_palette,
-    check_placeholders,
-    main as build_main,
     scan_file,
+    scan_text,
 )
+from optional_deps import MissingDepError, require_pymupdf  # noqa: E402
 from shared import (  # noqa: E402
     DIAGRAM_TEMPLATES,
     HTML_TEMPLATES,
@@ -63,6 +76,7 @@ from shared import (  # noqa: E402
     build_targets,
     diagram_targets,
     load_checks_thresholds,
+    pptx_targets,
     screen_targets,
 )
 import highlight as highlight_mod  # noqa: E402
@@ -75,7 +89,11 @@ from site_facts import (  # noqa: E402
     site_structure_issues,
 )
 from tokens import _mermaid_theme_drift  # noqa: E402
-from verify import RECOGNIZABLE_FALLBACK_FONT_MARKERS  # noqa: E402
+from verify import (  # noqa: E402
+    RECOGNIZABLE_FALLBACK_FONT_MARKERS,
+    _classify_cjk_font,
+    _font_family_key,
+)
 
 
 # --------------------------- helpers ---------------------------
@@ -220,6 +238,31 @@ def test_dist_package_contents() -> None:
           not missing_required,
           f"missing entries: {', '.join(missing_required)}")
 
+    # Structure alone cannot tell a current package from a stale one. The
+    # plugin mirror has `build_metadata.py --check`; the ZIP had no equivalent,
+    # so editing a source file and forgetting `package-skill.sh` left every
+    # check green while the archive Claude Desktop users download stayed on the
+    # old content. Compare what is inside against what it was built from.
+    stale: list[str] = []
+    absent: list[str] = []
+    with zipfile.ZipFile(archive) as zf:
+        for name in zf.namelist():
+            if name.endswith("/"):
+                continue
+            source = REPO_ROOT / name.removeprefix(f"{PACKAGE_ROOT_NAME}/")
+            if not source.exists():
+                absent.append(name)
+                continue
+            if hashlib.sha256(zf.read(name)).digest() != hashlib.sha256(source.read_bytes()).digest():
+                stale.append(name)
+    check("dist/kami.zip matches the sources it was built from",
+          not stale,
+          f"{len(stale)} stale entr(ies): {', '.join(sorted(stale)[:5])}"
+          " -- run `bash scripts/package-skill.sh`")
+    check("dist/kami.zip carries no entry missing from the repo",
+          not absent,
+          f"entries with no source: {', '.join(sorted(absent)[:5])}")
+
 
 def test_plugin_metadata_generated() -> None:
     """Claude Code / Codex marketplaces and plugin mirrors must stay generated."""
@@ -308,6 +351,8 @@ def test_registry_consistency() -> None:
           dict(DIAGRAM_TARGETS) == diagram_targets() == dict(DIAGRAM_TEMPLATES))
     check("PPTX_TARGETS has 2 entries", len(PPTX_TARGETS) == 2,
           f"got {len(PPTX_TARGETS)}")
+    check("PPTX_TARGETS in build.py matches shared.pptx_targets()",
+          dict(PPTX_TARGETS) == pptx_targets())
     check("PARCHMENT_RGB is canonical", PARCHMENT_RGB == (0xF5, 0xF4, 0xED))
 
 
@@ -540,6 +585,202 @@ def test_font_fallback_markers_recognize_pt_serif() -> None:
     check("font fallback markers recognize PT-Serif",
           fallback_present,
           f"markers: {RECOGNIZABLE_FALLBACK_FONT_MARKERS}")
+
+
+def test_brand_left_rule_uses_one_of_three_weights() -> None:
+    """The brand left rule is one gesture at three weights, picked by role.
+
+    design.md «The brand left rule» assigns 2.5pt to a structural divide, 2pt
+    to an aside, and 1.4pt to the edge of a filled block. A fourth value is not
+    a new idea, it is drift: the same `.callout` shipping at 1.8pt in one-pager
+    and 2pt in long-doc is what teaches a reader of these templates that the
+    number is theirs to pick, and inventing rules is exactly the drift the
+    generated documents show.
+    """
+    allowed = {"2.5", "2", "1.4"}
+    pattern = re.compile(r"border-left:\s*([\d.]+)pt solid var\(--brand\)")
+    offenders: list[str] = []
+    for path in sorted(TEMPLATES.glob("*.html")):
+        for weight in pattern.findall(path.read_text(encoding="utf-8")):
+            if weight not in allowed:
+                offenders.append(f"{path.name}: {weight}pt")
+    check("brand left rule uses one of the three registered weights",
+          not offenders,
+          f"offenders: {', '.join(offenders)}")
+
+
+def test_documented_snippets_answer_to_template_rules() -> None:
+    """A doc snippet is copied more readily than a template is read.
+
+    CHEATSHEET.md shipped a `.card` recipe pairing a 0.5pt border with an 8pt
+    radius (the double-ring pitfall templates are failed for) against
+    `--border-cream`, a token that no longer exists anywhere. Both survived
+    because nothing scanned the docs.
+    """
+    bad = """```css
+.card {
+  background: var(--ivory);
+  border: 0.5pt solid var(--border-cream);
+  border-radius: 8pt;
+}
+```
+"""
+    p = write_temp_html(bad, suffix=".md")
+    try:
+        rules = set()
+        for line_offset, snippet in _documented_snippets(p.read_text(encoding="utf-8")):
+            rules |= {f.rule for f in scan_text(snippet, p, line_offset)}
+            rules |= {f.rule for f in _undefined_token_findings(p, snippet, line_offset, {"--ivory"})}
+        check("doc snippet scan catches the thin-border-radius recipe",
+              "thin-border-radius" in rules, f"rules: {rules or '(none)'}")
+        check("doc snippet scan catches a var() with no definition",
+              "undefined-token" in rules, f"rules: {rules or '(none)'}")
+    finally:
+        p.unlink(missing_ok=True)
+
+
+def test_documented_snippets_skip_tagged_counter_examples() -> None:
+    """Docs teach by contrast; the line tagged `/* avoid */` is the lesson."""
+    contrast = """```css
+/* avoid */ .tag { background: rgba(27, 54, 93, 0.18); }
+/* use   */ .tag { background: var(--tag-bg); }
+```
+"""
+    p = write_temp_html(contrast, suffix=".md")
+    try:
+        rules = set()
+        for line_offset, raw in _documented_snippets(p.read_text(encoding="utf-8")):
+            rules |= {f.rule for f in scan_text(_blank_block(raw, NEGATIVE_EXAMPLE_LINE), p, line_offset)}
+        check("a line tagged as the wrong way is not reported as a violation",
+              "rgba-background" not in rules, f"rules: {rules or '(none)'}")
+    finally:
+        p.unlink(missing_ok=True)
+
+
+def test_font_family_key_collapses_weight_variants() -> None:
+    """One family at two weights must not read as two typefaces.
+
+    Bold CJK body text is a separate BaseFont entry (TsangerJinKai02 plus
+    TsangerJinKai02-Medium, or the W04/W05 pair). Without collapsing, the
+    mixed-family rule would fail every correctly rendered bilingual document.
+    """
+    pairs = [
+        ("TsangerJinKai02", "TsangerJinKai02-Medium"),
+        ("TsangerJinKai02-W04", "TsangerJinKai02-W05"),
+        ("Source-Han-Serif-K", "Source-Han-Serif-K-Mediu"),
+        ("NotoSerifCJKsc-Regular", "NotoSerifCJKsc-Bold"),
+    ]
+    offenders = [f"{a} != {b}" for a, b in pairs if _font_family_key(a) != _font_family_key(b)]
+    check("font family key collapses weight variants",
+          not offenders,
+          f"offenders: {', '.join(offenders)}")
+    check("font family key still separates real families",
+          _font_family_key("Songti-SC") != _font_family_key("Hiragino-Mincho-ProN-Lig"))
+
+
+def test_classify_cjk_font_separates_serif_from_the_rest() -> None:
+    """The gate exists because a sans substitution shows no fallback boxes.
+
+    A missing CJK serif is invisible to an eyeball pass: the page still reads,
+    just with the wrong stroke density against metrics tuned for serif. The
+    classifier is what turns that into a failure.
+    """
+    cases = {
+        "ABCDEF+TsangerJinKai02-W04": "primary",
+        "Songti-SC": "serif",
+        "NotoSerifCJKsc-Regular": "serif",
+        "Noto Serif CJK SC": "serif",
+        "PingFang-SC": "other",
+        "NotoSansCJKsc-Regular": "other",
+        "SourceHanSansSC-Regular": "other",
+    }
+    offenders = [
+        f"{name} -> {_classify_cjk_font(name)} (want {want})"
+        for name, want in cases.items()
+        if _classify_cjk_font(name) != want
+    ]
+    check("CJK font classifier separates primary and serif from everything else",
+          not offenders,
+          f"offenders: {', '.join(offenders)}")
+
+
+def test_emphasis_container_mix_counts_distinct_fills() -> None:
+    """Drift is several emphasis languages on a page, not one used repeatedly.
+
+    Templates reuse a single fill across several raised components, which must
+    stay clean. A generated document that invents a white rounded card for one
+    passage and a tinted rounded block for the next must fail.
+    """
+    one_fill = """<!doctype html>
+<html><head><style>
+:root { --ivory: #faf9f5; --brand: #1B365D; }
+.callout { background: var(--ivory); border-radius: 3pt; padding: 10pt; }
+.takeaway { background: #faf9f5; border-radius: 4pt; padding: 10pt; }
+.role { background: #E4ECF5; border-radius: 2pt; padding: 1pt 5pt; float: right; }
+</style></head><body></body></html>
+"""
+    two_fills = """<!doctype html>
+<html><head><style>
+:root { --ivory: #faf9f5; --tag-bg: #E4ECF5; }
+.qa-card { background: var(--ivory); border-radius: 8pt; padding: 10pt 14pt; }
+.boundary { background: var(--tag-bg); border-radius: 6pt; padding: 8pt 12pt; }
+</style></head><body></body></html>
+"""
+    clean = write_temp_html(one_fill)
+    drifted = write_temp_html(two_fills)
+    try:
+        check("one emphasis fill (plus an inline chip) is not drift",
+              not _emphasis_container_findings(clean),
+              f"findings: {[f.excerpt for f in _emphasis_container_findings(clean)]}")
+        found = _emphasis_container_findings(drifted)
+        check("two different emphasis fills are flagged",
+              len(found) == 1 and found[0].rule == "emphasis-container-mix",
+              f"findings: {[f.rule for f in found] or '(none)'}")
+    finally:
+        clean.unlink(missing_ok=True)
+        drifted.unlink(missing_ok=True)
+
+
+def test_density_scans_the_only_page_of_a_single_page_pdf() -> None:
+    """Page 1 is cover-exempt, which left one-page documents wholly unscanned.
+
+    one-pager and letter render to a single page, so the cover exemption meant
+    the only layout gate that reads a rendered page never looked at them.
+
+    The fixture is built here rather than read from assets/examples, which is
+    gitignored build output: pointing a test at it passes locally and fails on
+    a fresh checkout. Synthesising the page also pins the expected verdict,
+    since the emptiness ratio is chosen rather than inherited from whatever the
+    template currently renders.
+    """
+    try:
+        fitz = require_pymupdf()
+    except MissingDepError:
+        return  # PyMuPDF absent (the lint-and-test CI job); density suite skipped
+
+    with tempfile.TemporaryDirectory() as tmp:
+        single = Path(tmp) / "one-page.pdf"
+        doc = fitz.open()
+        page = doc.new_page(width=595, height=842)  # A4 in points
+        parchment = tuple(channel / 255 for channel in PARCHMENT_RGB)
+        page.draw_rect(fitz.Rect(0, 0, 595, 842), color=parchment, fill=parchment)
+        # Ink across the top third only, leaving ~64% trailing whitespace: past
+        # the sparse threshold, so a scanned page must be reported.
+        page.draw_rect(fitz.Rect(50, 50, 545, 300), color=(0.1, 0.1, 0.1), fill=(0.1, 0.1, 0.1))
+        doc.save(str(single))
+        doc.close()
+
+        default_scan = silently(scan_density, [str(single)])
+        explicit_scan = silently(scan_density, [str(single)], scan_single_page=True)
+
+    if default_scan is None or explicit_scan is None:
+        return
+    check("single-page PDF is exempt in the repo-wide sweep",
+          sum(default_scan[:2]) == 0,
+          f"scan: {default_scan}")
+    check("single-page PDF is scanned when passed explicitly",
+          sum(explicit_scan[:2]) > 0,
+          f"scan: {explicit_scan} (fixture leaves ~64% of the page empty)")
 
 
 def test_chinese_slides_mono_has_cjk_fallback() -> None:
@@ -958,6 +1199,13 @@ def test_markdown_residue_flags_raw_markers() -> None:
 
     check("markdown residue ignores clean text",
           _markdown_residue_issues("Clean paragraph with converted emphasis.") == [])
+
+    issues = _markdown_residue_issues("A claim\u2014with an em dash.\n中文\u2014\u2014双破折号。")
+    check("markdown residue flags em dashes",
+          sum("em dash" in issue for issue in issues) == 2,
+          f"issues={issues}")
+    check("markdown residue allows en dash and hyphen",
+          _markdown_residue_issues("Ranges use 2019-2024 and 3–5 items.") == [])
 
 
 def test_check_markdown_residue_skips_html_code_blocks() -> None:
@@ -1440,6 +1688,379 @@ def test_mermaid_normalize_cli_reports_missing_input() -> None:
         check("mermaid_normalize CLI reports missing input without traceback",
               result.returncode == 1 and "ERROR:" in combined and "Traceback" not in combined,
               combined.strip())
+
+
+# --------------------------- content IR ---------------------------
+
+def test_content_schemas_cover_all_public_doc_types() -> None:
+    from shared import content_schema_types, public_document_template_kinds
+    expected = public_document_template_kinds() | {"landing-page"}
+    actual = set(content_schema_types())
+    check("content schemas cover every public doc type plus landing-page",
+          actual == expected,
+          f"missing: {sorted(expected - actual)}, extra: {sorted(actual - expected)}")
+
+
+def test_content_schemas_parse_and_are_objects() -> None:
+    from shared import SCHEMAS_DIR, content_schema_types
+    bad = []
+    for name in content_schema_types():
+        try:
+            schema = json.loads((SCHEMAS_DIR / f"{name}.json").read_text(encoding="utf-8"))
+            if schema.get("type") != "object" or "required" in schema and not schema["required"]:
+                bad.append(name)
+        except json.JSONDecodeError:
+            bad.append(name)
+    check("content schemas parse as object contracts", not bad, f"bad: {bad}")
+
+
+def test_validate_node_flags_structural_defects() -> None:
+    from content import validate_node
+    schema = {
+        "type": "object",
+        "required": ["title", "metrics"],
+        "properties": {
+            "title": {"type": "string", "minLength": 2, "maxLength": 10},
+            "metrics": {
+                "type": "array", "minItems": 3, "maxItems": 4,
+                "items": {"type": "object", "required": ["value"],
+                          "properties": {"value": {"type": "string"}}},
+            },
+            "layout": {"type": "string", "enum": ["cover", "content"]},
+        },
+    }
+    ok = validate_node({"title": "Hello", "metrics": [{"value": "1"}] * 3}, schema)
+    check("validate_node passes a conforming object", ok == [])
+    issues = validate_node(
+        {"title": "way too long for the cap", "metrics": [{}], "layout": "hero"},
+        schema,
+    )
+    text = "\n".join(issues)
+    check("validate_node flags length, count, required, and enum defects",
+          "too long" in text and "too few items" in text
+          and "missing required field 'value'" in text and "'hero' not in" in text,
+          text)
+
+
+def test_coverage_issues_catch_dropped_values() -> None:
+    from content import coverage_issues
+    content = {
+        "name": "Kami",
+        "metric": "62%",
+        "note": "p" * 120,
+        "image": "shot.png",
+        "cjk": "用户 2M 规模",
+    }
+    html_text = "Kami cut latency 62% at 用户2M规模 scale"
+    issues, checked, skipped = coverage_issues(content, html_text)
+    check("coverage passes present values, skips prose and images, normalizes CJK spacing",
+          issues == [] and checked == 3 and skipped == 1,
+          f"issues={issues} checked={checked} skipped={skipped}")
+    issues, _, _ = coverage_issues({"metric": "$340K"}, html_text)
+    check("coverage flags a dropped atomic value",
+          len(issues) == 1 and "$340K" in issues[0], str(issues))
+
+
+def test_check_content_cli_validates_and_covers() -> None:
+    from content import check_content
+    payload = {
+        "type": "letter",
+        "lang": "en",
+        "content": {
+            "sender": "Ada Lovelace, London",
+            "date": "2026-07-13",
+            "recipient": "Charles Babbage",
+            "salutation": "Dear Charles,",
+            "paragraphs": [
+                "I write to state my purpose in one sentence: the engine deserves a program of its own.",
+                "The evidence sits in the notes: fifty operations, one loop, and a table the machine can follow.",
+                "My ask is specific: review the table this month so we can test it on the mill.",
+            ],
+            "signoff": "Sincerely,",
+            "signature": "Ada",
+        },
+    }
+    with tempfile.TemporaryDirectory() as d:
+        content_path = Path(d) / "content.json"
+        content_path.write_text(json.dumps(payload), encoding="utf-8")
+        rc = silently(check_content, [str(content_path)])
+        check("check_content accepts a valid letter IR", rc == 0)
+        html = write_temp_html(
+            "<html><body><p>Ada Lovelace, London 2026-07-13 Charles Babbage "
+            "Dear Charles, My ask is specific: review the table this month so "
+            "we can test it on the mill. Sincerely, Ada</p></body></html>"
+        )
+        try:
+            rc = silently(check_content, [str(content_path), str(html)])
+            check("check_content coverage passes when atomic values present", rc == 0)
+        finally:
+            html.unlink()
+        del payload["content"]["signature"]
+        content_path.write_text(json.dumps(payload), encoding="utf-8")
+        rc = silently(check_content, [str(content_path)])
+        check("check_content rejects a missing required field", rc == 1)
+        rc = silently(check_content, [])
+        check("check_content usage error returns 2", rc == 2)
+
+
+def test_build_cli_dispatches_new_checks() -> None:
+    rc, out = run_build_args(["--check-content"])
+    check("build.py --check-content without args is a usage error",
+          rc == 2 and "usage" in out, out.strip()[:120])
+    rc, out = run_build_args(["--check-visual"])
+    check("build.py --check-visual without args is a usage error",
+          rc == 2 and "usage" in out, out.strip()[:120])
+
+
+def test_visual_checklist_and_output_dir() -> None:
+    from visual import REVIEW_CHECKLIST, visual_output_dir
+    check("visual checklist has stable size and no em dash",
+          len(REVIEW_CHECKLIST) == 8 and all("\u2014" not in line for line in REVIEW_CHECKLIST))
+    out = visual_output_dir(Path("/tmp/docs/report.pdf"))
+    check("visual output dir sits next to the pdf",
+          out == Path("/tmp/docs/report-visual"), str(out))
+
+
+def test_visual_clears_stale_page_images() -> None:
+    """A re-render with fewer pages must not leave prior page PNGs behind."""
+    from visual import _clear_page_images
+    with tempfile.TemporaryDirectory() as d:
+        target = Path(d)
+        for name in ("page-01.png", "page-07.png", "notes.txt"):
+            (target / name).write_bytes(b"x")
+        _clear_page_images(target)
+        left = sorted(p.name for p in target.iterdir())
+        check("stale page PNGs removed, unrelated files kept",
+              left == ["notes.txt"], str(left))
+
+
+def test_coverage_survives_split_markup_values() -> None:
+    """Values split across sibling nodes ("62" + "%") must still count as present."""
+    from content import coverage_issues
+    issues, checked, _ = coverage_issues({"metric": "62%"}, "value:\n62\n%")
+    check("coverage rejoins values split by markup",
+          issues == [] and checked == 1, str(issues))
+
+
+def test_coverage_rejects_substrings_and_hidden_text() -> None:
+    """Changed facts and hidden-only copies must not satisfy coverage."""
+    from content import coverage_issues
+    from checks import visible_html_text
+
+    cases = [
+        ({"metric": "62%"}, "Revenue reached 162%"),
+        ({"metric": "62"}, "Revenue reached 1962"),
+        ({"metric": "12 34"}, "Revenue reached 1234"),
+        ({"metric": 1.0}, "Revenue reached 1.5"),
+    ]
+    issues = [coverage_issues(content, text)[0] for content, text in cases]
+    check("coverage rejects values embedded in larger or collapsed tokens",
+          all(len(found) == 1 for found in issues), str(issues))
+
+    hidden_html = (
+        "<html><head><title>62%</title><style>.concealed { display: none }</style></head><body>"
+        "<template>62%</template><p hidden>62%</p>"
+        '<p aria-hidden="true">62%</p><p style="display: none">62%</p>'
+        '<p class="concealed">62%</p>'
+        "<p>Visible value is 61%.</p></body></html>"
+    )
+    text = visible_html_text(hidden_html)
+    missing, _, _ = coverage_issues({"metric": "62%"}, text)
+    check("coverage ignores head, template, hidden, and display-none text",
+          len(missing) == 1, f"text={text!r} issues={missing}")
+
+
+def test_coverage_checks_asset_attributes() -> None:
+    from content import coverage_issues, html_resource_attributes
+
+    raw = (
+        '<img src="./images/product-shot.png" alt="Product">'
+        '<source srcset="images/product-shot@2x.webp 2x, images/product-shot.webp 1x">'
+        '<template><img src="hidden-shot.png"></template>'
+        '<a href="linked-only.png">not embedded</a>'
+    )
+    attrs = html_resource_attributes(raw)
+    present, checked, _ = coverage_issues(
+        {"image": "product-shot.png", "images": ["product-shot@2x.webp"]}, "", attrs
+    )
+    missing, _, _ = coverage_issues({"image": "missing-shot.png"}, "", attrs)
+    check("coverage accepts image paths present in src and srcset",
+          present == [] and checked == 2, f"issues={present} attrs={attrs}")
+    check("coverage rejects omitted image assets",
+          len(missing) == 1 and "missing-shot.png" in missing[0], str(missing))
+    hidden, _, _ = coverage_issues(
+        {"images": ["hidden-shot.png", "linked-only.png"]}, "", attrs
+    )
+    check("coverage ignores assets in templates and plain links",
+          len(hidden) == 2, f"issues={hidden} attrs={attrs}")
+
+
+def test_coverage_caps_adversarial_reports() -> None:
+    from content import MAX_COVERAGE_ISSUES, MAX_COVERAGE_VALUES, coverage_issues
+
+    missing, _, _ = coverage_issues({"values": list(range(1000))}, "")
+    oversized, _, _ = coverage_issues({"values": ["present"] * (MAX_COVERAGE_VALUES + 1)}, "present")
+    check("coverage caps missing-value reports",
+          len(missing) == MAX_COVERAGE_ISSUES + 1
+          and "issue limit" in missing[-1], f"issues={len(missing)}")
+    check("coverage caps the number of atomic values",
+          len(oversized) == 1 and "too many atomic values" in oversized[0], str(oversized[-2:]))
+
+
+# --------------------------- MCP server ---------------------------
+
+def test_mcp_server_stdio_protocol() -> None:
+    """The server must speak newline-delimited JSON-RPC with nothing else on stdout."""
+    script = REPO_ROOT / "scripts" / "mcp_server.py"
+    msgs = [
+        {"jsonrpc": "2.0", "id": 1, "method": "initialize",
+         "params": {"protocolVersion": "2025-03-26"}},
+        {"jsonrpc": "2.0", "method": "notifications/initialized"},
+        {"jsonrpc": "2.0", "id": 2, "method": "tools/list"},
+        {"jsonrpc": "2.0", "id": 3, "method": "tools/call",
+         "params": {"name": "kami_templates", "arguments": {}}},
+        {"jsonrpc": "2.0", "id": 4, "method": "tools/call",
+         "params": {"name": "nope", "arguments": {}}},
+    ]
+    stdin = "".join(json.dumps(m) + "\n" for m in msgs)
+    result = subprocess.run(
+        [sys.executable, str(script)],
+        input=stdin, capture_output=True, text=True, cwd=REPO_ROOT, timeout=60,
+    )
+    try:
+        replies = {m.get("id"): m for m in map(json.loads, result.stdout.strip().splitlines())}
+    except json.JSONDecodeError:
+        check("mcp server stdout is newline-delimited JSON", False, result.stdout[:200])
+        return
+    init = replies.get(1, {}).get("result", {})
+    check("mcp initialize echoes protocol version and names the server",
+          init.get("protocolVersion") == "2025-03-26"
+          and init.get("serverInfo", {}).get("name") == "kami",
+          json.dumps(init)[:200])
+    tools = [t["name"] for t in replies.get(2, {}).get("result", {}).get("tools", [])]
+    check("mcp tools/list exposes the four kami tools",
+          tools == ["kami_templates", "kami_render", "kami_check", "kami_screenshot"],
+          str(tools))
+    body = replies.get(3, {}).get("result", {}).get("content", [{}])[0].get("text", "{}")
+    payload = json.loads(body)
+    check("mcp kami_templates returns registries and schema types",
+          set(payload.get("document_templates", {})) == set(HTML_TEMPLATES)
+          and payload.get("content_schema_types"),
+          body[:200])
+    check("mcp unknown tool returns a JSON-RPC error",
+          "error" in replies.get(4, {}), json.dumps(replies.get(4, {}))[:200])
+    check("mcp notification produced no reply", len(replies) == 4, str(sorted(replies)))
+
+
+def test_mcp_server_rejects_bad_frames_without_exiting() -> None:
+    """Wrong-shaped JSON-RPC frames return errors and do not kill the server."""
+    script = REPO_ROOT / "scripts" / "mcp_server.py"
+    msgs = [
+        [],
+        {"jsonrpc": "2.0", "id": 1, "method": "tools/call", "params": "bad"},
+        {"jsonrpc": "2.0", "id": 2, "method": "tools/call",
+         "params": {"name": "kami_templates", "arguments": ["bad"]}},
+        {"jsonrpc": "2.0", "id": 3, "method": "ping"},
+    ]
+    result = subprocess.run(
+        [sys.executable, str(script)],
+        input="".join(json.dumps(m) + "\n" for m in msgs),
+        capture_output=True, text=True, cwd=REPO_ROOT, timeout=60,
+    )
+    replies = [json.loads(line) for line in result.stdout.strip().splitlines()]
+    by_id = {reply.get("id"): reply for reply in replies}
+    check("mcp malformed frames keep the process alive",
+          result.returncode == 0 and len(replies) == 4 and "result" in by_id.get(3, {}),
+          (result.stdout + result.stderr)[:400])
+    check("mcp wrong params and arguments return invalid-params errors",
+          by_id.get(1, {}).get("error", {}).get("code") == -32602
+          and by_id.get(2, {}).get("error", {}).get("code") == -32602,
+          result.stdout[:400])
+
+
+def test_mcp_render_guards_source_and_output_types() -> None:
+    from mcp_server import tool_render
+
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        html = root / "source.html"
+        html.write_text("<html><body>safe source</body></html>", encoding="utf-8")
+        original = html.read_bytes()
+        hardlink = root / "hardlink.pdf"
+        hardlink.hardlink_to(html)
+        victim = root / "victim.txt"
+        victim.write_bytes(b"do-not-overwrite")
+        symlink = root / "symlink.pdf"
+        symlink.symlink_to(victim)
+        rejected = 0
+        for out in (html, hardlink, symlink, root / "not-pdf.txt"):
+            try:
+                tool_render({"html": str(html), "out": str(out)})
+            except ValueError:
+                rejected += 1
+        check("mcp render rejects source aliases and non-PDF outputs",
+              rejected == 4 and html.read_bytes() == original
+              and victim.read_bytes() == b"do-not-overwrite",
+              f"rejected={rejected} source_changed={html.read_bytes() != original}")
+
+
+def test_visual_rejects_empty_pdf_and_bad_dpi() -> None:
+    try:
+        from pypdf import PdfWriter
+        from visual import render_pages
+    except ImportError:
+        check("visual empty-PDF guard skipped without pypdf", True)
+        return
+
+    with tempfile.TemporaryDirectory() as d:
+        pdf = Path(d) / "empty.pdf"
+        evidence = Path(d) / "empty-visual"
+        evidence.mkdir()
+        old_page = evidence / "page-01.png"
+        old_page.write_bytes(b"last-good-run")
+        writer = PdfWriter()
+        writer.write(str(pdf))
+        errors = 0
+        for dpi in (1, -1, 301):
+            try:
+                render_pages(pdf, dpi=dpi)
+            except ValueError:
+                errors += 1
+        try:
+            render_pages(pdf, dpi=110)
+        except ValueError as exc:
+            empty_error = "no pages" in str(exc)
+        else:
+            empty_error = False
+        check("visual rejects empty PDFs and out-of-range DPI",
+              empty_error and errors == 3,
+              f"empty_error={empty_error} dpi_errors={errors}")
+        check("failed visual render preserves last good evidence",
+              old_page.read_bytes() == b"last-good-run")
+
+        symlink_target = Path(d) / "elsewhere"
+        symlink_target.mkdir()
+        symlink_output = Path(d) / "linked-visual"
+        symlink_output.symlink_to(symlink_target, target_is_directory=True)
+        try:
+            render_pages(pdf, out_dir=symlink_output, dpi=110)
+        except ValueError as exc:
+            symlink_rejected = "symbolic link" in str(exc)
+        else:
+            symlink_rejected = False
+        check("visual rejects a symbolic-link evidence directory", symlink_rejected)
+
+        huge_pdf = Path(d) / "huge.pdf"
+        huge_writer = PdfWriter()
+        huge_writer.add_blank_page(width=5000, height=5000)
+        huge_writer.write(str(huge_pdf))
+        try:
+            render_pages(huge_pdf, dpi=300)
+        except ValueError as exc:
+            huge_rejected = "pixels" in str(exc)
+        else:
+            huge_rejected = False
+        check("visual rejects an oversized raster page before rendering", huge_rejected)
 
 
 def _test_functions():
