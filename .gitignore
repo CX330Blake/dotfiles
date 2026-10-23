@@ -1,2 +1,5 @@
 .DS_STORE
 **/.obsidian_api_key
+
+# Local OpenCode server credentials
+/opencode/service.json
