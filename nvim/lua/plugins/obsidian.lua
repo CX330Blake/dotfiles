@@ -1,6 +1,7 @@
 return {
     "obsidian-nvim/obsidian.nvim",
-    lazy = true,
+    -- lazy = true,
+    lazy = false,
     version = "*", -- use latest release, remove to use latest commit
     ft = "markdown",
     ---@module 'obsidian'

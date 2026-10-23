@@ -8,6 +8,7 @@ vim.g.lazyvim_picker = "snacks"
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.g.autoformat = false -- disable format on save
 
 -- Disable mouse
 -- vim.keymap.set("", "<up>", "<nop>", { noremap = true })

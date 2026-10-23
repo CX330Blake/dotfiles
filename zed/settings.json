@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "terminal": {
+    "font_size": 12.0
+  },
   "agent_servers": {
     "opencode": {
       "type": "registry"
@@ -93,7 +96,7 @@
   ],
   "vim_mode": true,
   "ui_font_size": 14,
-  "buffer_font_size": 14,
+  "buffer_font_size": 12,
   "buffer_font_family": "Maple Mono NF",
   "vim": {
     "toggle_relative_line_numbers": true
@@ -101,7 +104,7 @@
   "theme": {
     "mode": "system",
     "light": "Rosé Pine Dawn",
-    "dark": "Dracula"
+    "dark": "Kanagawa Wave"
   },
   "formatter": "language_server",
   "format_on_save": "on",

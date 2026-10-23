@@ -139,6 +139,12 @@ alias ts="tailscale"
 alias pve='ssh -Y root@pve'
 alias win='ssh -Y cx330@win10'
 alias kali='ssh -Y cx330@kali'
+alias trek='ssh -Y cx330@trek'
+alias dawarich='ssh -Y cx330@dawarich'
+alias immich='ssh -Y cx330@immich'
+alias pocket-id='ssh -Y cx330@pocket-id'
+alias paperless='ssh -Y cx330@paperless'
+alias cloud='ssh -Y cx330@cloud'
 alias fedora='ssh -Y cx330@fedora'
 alias affine='ssh -Y cx330@affine'
 alias travel='ssh -Y cx330@travel'
@@ -299,6 +305,19 @@ alias "hacke"="tmux kill-session -t hack"
 ##### FZF for fuzzy completion #####
 source <(fzf --zsh)
 
+export FZF_CTRL_R_OPTS="
+  --height=40%
+  --layout=reverse
+  --border=rounded
+  --info=inline
+  --prompt='History> '
+  --color='bg:-1,bg+:-1'
+  --color='fg:-1,fg+:-1'
+  --color='hl:cyan,hl+:bright-cyan'
+  --color='prompt:blue,pointer:magenta,marker:green'
+  --color='border:bright-black,info:bright-black'
+"
+
 ##### Personal scripts and bin #####
 export PATH="$HOME/bin:$PATH"
 
@@ -327,10 +346,10 @@ alias borderon="brew services start borders"
 alias borderoff="brew services stop borders"
 
 ##### OpenMPI #####
-export PATH=/usr/lib64/openmpi/bin:$PATH
-export OMPI_MCA_pml=ob1
-export OMPI_MCA_btl=self,tcp
-export OMPI_MCA_mtl=^ofi
+# export PATH=/usr/lib64/openmpi/bin:$PATH
+# export OMPI_MCA_pml=ob1
+# export OMPI_MCA_btl=self,tcp
+# export OMPI_MCA_mtl=^ofi
 
 ##### Bat #####
 export BAT_THEME="ansi"
@@ -451,3 +470,8 @@ nvimc() {
 ##### Chisel #####
 alias cclient="chisel client kali:8080 1080:socks"
 alias cserver="chisel server --socks5"
+
+export PATH="$PATH:"/Applications/microchip/xc8/v3.10/bin""
+
+# bun completions
+[ -s "/Users/CX330/.bun/_bun" ] && source "/Users/CX330/.bun/_bun"

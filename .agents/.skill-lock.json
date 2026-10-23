@@ -216,6 +216,78 @@
       "skillFolderHash": "1f9a51abfdb29bbd36110539f5af8ffd9c73df19",
       "installedAt": "2026-07-05T11:21:56.378Z",
       "updatedAt": "2026-07-05T11:21:56.378Z"
+    },
+    "i-have-adhd": {
+      "source": "ayghri/i-have-adhd",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ayghri/i-have-adhd.git",
+      "skillPath": "skills/i-have-adhd/SKILL.md",
+      "skillFolderHash": "72dc6e3e9d0f8d906579a235edb7b2a402d7b8e1",
+      "installedAt": "2026-09-04T17:36:11.488Z",
+      "updatedAt": "2026-09-13T12:08:16.214Z"
+    },
+    "defuddle": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
+      "skillPath": "skills/defuddle/SKILL.md",
+      "skillFolderHash": "72c1262fcb7abd3b846032d12dd8adefeb7da569",
+      "installedAt": "2026-10-06T09:36:59.442Z",
+      "updatedAt": "2026-10-06T09:36:59.442Z"
+    },
+    "json-canvas": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
+      "skillPath": "skills/json-canvas/SKILL.md",
+      "skillFolderHash": "9df7971db7ffebf96f2a207840b9f4765aa11b04",
+      "installedAt": "2026-10-06T09:36:59.449Z",
+      "updatedAt": "2026-10-06T09:36:59.449Z"
+    },
+    "knap": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
+      "skillPath": "skills/knap/SKILL.md",
+      "skillFolderHash": "f49e09ee53feece10378a1fb1194632581fb066a",
+      "installedAt": "2026-10-06T09:36:59.450Z",
+      "updatedAt": "2026-10-06T09:36:59.450Z"
+    },
+    "obsidian-bases": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-bases/SKILL.md",
+      "skillFolderHash": "f3330f27de4d7907ead57d0f48672f4d3280bb77",
+      "installedAt": "2026-10-06T09:36:59.452Z",
+      "updatedAt": "2026-10-06T09:36:59.452Z"
+    },
+    "obsidian-cli": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-cli/SKILL.md",
+      "skillFolderHash": "96254a554e480359de7b685571876f2e7f9ba57d",
+      "installedAt": "2026-10-06T09:36:59.453Z",
+      "updatedAt": "2026-10-06T09:36:59.453Z"
+    },
+    "obsidian-markdown": {
+      "source": "kepano/obsidian-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-markdown/SKILL.md",
+      "skillFolderHash": "4723197c6dc59abc29819da87863b1ac20b96095",
+      "installedAt": "2026-10-06T09:36:59.453Z",
+      "updatedAt": "2026-10-06T09:36:59.453Z"
+    },
+    "caveman": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/JuliusBrussee/caveman.git",
+      "skillPath": "skills/caveman/SKILL.md",
+      "skillFolderHash": "b314dd99b2b8723aae2de5a22079914567f2e58f",
+      "installedAt": "2026-10-21T21:55:33.933Z",
+      "updatedAt": "2026-10-21T21:55:33.933Z"
     }
   },
   "dismissed": {
@@ -223,14 +295,13 @@
   },
   "lastSelectedAgents": [
     "amp",
-    "antigravity",
-    "antigravity-cli",
     "cline",
     "codex",
     "cursor",
-    "deepagents",
+    "droid",
     "gemini-cli",
     "github-copilot",
+    "kilo",
     "kimi-code-cli",
     "opencode",
     "warp",

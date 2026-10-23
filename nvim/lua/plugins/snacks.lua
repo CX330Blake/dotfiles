@@ -31,7 +31,7 @@ return {
                     },
                 },
                 layout = {
-                    preset = "telescope",
+                    preset = "default",
                 },
             },
             image = {

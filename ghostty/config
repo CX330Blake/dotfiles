@@ -2,12 +2,13 @@
 # https://ghostty.zerebos.com/
 
 # title = Ghostty 👻
-background-opacity = 0.8
+background-opacity = 0.6
 background-blur-radius = 20
 # theme = "TokyoNight Moon"
 # theme = light: "Rose Pine Dawn", dark: "Rose Pine Moon"
 # theme = light: "TokyoNight Day", dark: "TokyoNight Moon"
 theme = light: "Flexoki Light", dark: "Flexoki Dark"
+# theme = light: "Flexoki Light", dark: "Kanagawa Wave"
 bold-is-bright = true
 # background = #1e1f29
 # foreground = #e6e6e6
@@ -20,12 +21,12 @@ cursor-style-blink = false
 cursor-style = block
 shell-integration = none
 # font-size = 12
-font-size = 14
+font-size = 13
 # font-family = "FiraCode Nerd Font"
 # font-family = "Zed Mono"
 font-family = "Maple Mono NF Regular"
-font-codepoint-map = U+4E00-U+9FFF = LXGW WenKai Mono TC
-font-codepoint-map = U+3400-U+4DBF = LXGW WenKai Mono TC
+# font-codepoint-map = U+4E00-U+9FFF = LXGW WenKai Mono TC
+# font-codepoint-map = U+3400-U+4DBF = LXGW WenKai Mono TC
 adjust-cell-height = 15% 
 font-style = Regular
 font-style-bold = Bold
@@ -37,6 +38,11 @@ window-padding-x = 10
 window-padding-y = 10
 macos-icon = glass
 
+# liquid glass
+# background-opacity = 0.0 
+# background-blur = macos-glass-clear 
+# macos-titlebar-style = transparent
+
 
 # Shaders
 # custom-shader-animation = false
@@ -46,6 +52,6 @@ macos-icon = glass
 # custom-shader = "shaders/cursor_blaze.glsl"
 
 # Keybindings
-keybind = global:cmd+grave_accent=toggle_quick_terminal
+keybind = global:cmd+backquote=toggle_quick_terminal
 
 
